@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, ImageBackground} from 'react-native';
 import {Button, Input, Item, Toast, Spinner, Icon} from 'native-base';
 import {Actions} from 'react-native-router-flux';
-import img from '../../assets/imgs/img.jpg';
+import imgb from '../../assets/imgs/imgb.jpg'
 import firebase, {firebaseAuth} from '../firebase/Firebase';
 
 export default class Registro extends Component < {} > {
@@ -70,7 +70,7 @@ export default class Registro extends Component < {} > {
 
     render() {
         return (
-            <ImageBackground source={img} style={styles.img}>
+            <ImageBackground source={imgb} style={styles.img}>
                 <View style={styles.estiloImageB}>
 
                     <View style={styles.view4}>
