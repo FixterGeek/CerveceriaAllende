@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react';
 import {Text, View, Image, ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
 import {Card, CardItem, Icon, Button} from 'native-base';
@@ -153,4 +154,3 @@ const styles = StyleSheet.create({
         color: "green"
     }
 });
-
