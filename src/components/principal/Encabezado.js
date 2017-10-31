@@ -10,7 +10,7 @@ const Encabezado = (props) => {
             <View style={styles.view}>
                 <Image
                     style={{width: 50, height: 50,}}
-                    source={{uri: 'https://lh3.googleusercontent.com/RSIPzkwesASlvCGYyds3DEkfHktDogxXk8n72BdtLpq_IPW_5qxkEd-x1vj_naTw-EcM=w300'}}
+                    source={{uri: 'http://cerveceriaallende.mx/wp-content/uploads/2015/05/logo.png'}}
                 />
             </View>
 
@@ -24,8 +24,8 @@ export default Encabezado;
 
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: "orange",
-        justifyContent: "center"
+        backgroundColor: "#CB361E",
+        justifyContent: "center",
     },
     view: {
         flexDirection: 'column',
