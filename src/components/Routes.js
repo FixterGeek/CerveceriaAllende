@@ -1,9 +1,9 @@
 import React from 'react';
 import {Root} from 'native-base';
 import {Router, Scene} from 'react-native-router-flux';
-import Login from "./components/login/Login";
-import Log from "./components/login/Log";
-import Recover from "./components/login/Recover";
+import Login from './components/login/Login';
+import Log from './components/login/Log';
+import Recover from './components/login/Recover';
 
 const Routes = () => {
     return (
