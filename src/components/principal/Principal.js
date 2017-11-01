@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Text, View, Image, ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
 import {Card, CardItem, Icon, Button} from 'native-base';
 import Modal from 'react-native-modal';
+import {Actions} from 'react-native-router-flux';
 import Select from "./Select";
 import Encabezado from "./Encabezado";
 
@@ -22,7 +23,7 @@ export default class Principal extends Component < {} > {
 
             <Text style={styles.text}>Cerveza artesanal</Text>
             <Select/>
-            <Button bordered iconRight style={styles.button} onPress={() => alert('Agregado!')}>
+            <Button bordered iconRight style={styles.button} onPress={()=>Actions.Detalle()}>
                 <Text style={{color:'#CB361E'}}>PEDIR</Text>
                 <Icon name="cart" style={styles.icon}/>
             </Button>
