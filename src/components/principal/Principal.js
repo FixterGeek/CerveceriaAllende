@@ -1,8 +1,9 @@
-
 import React, {Component} from 'react';
 import {Text, View, Image, ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
 import {Card, CardItem, Icon, Button} from 'native-base';
 import Modal from 'react-native-modal';
+import Select from "./Select";
+import Encabezado from "./Encabezado";
 
 export default class Principal extends Component < {} > {
     state = {
@@ -14,14 +15,15 @@ export default class Principal extends Component < {} > {
             <View style={styles.view}>
                 <Card>
                     <Image source={{
-                        uri: 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Tomates_-_Vladimir_Morozov.jpg'
+                        uri: 'http://cerveceriaallende.mx/wp-content/uploads/2016/02/BrownAleFinal2.png'
                     }} style={styles.img2}/>
                 </Card>
             </View>
 
-            <Text style={styles.text}>Jitomate</Text>
+            <Text style={styles.text}>Cerveza artesanal</Text>
+            <Select/>
             <Button bordered iconRight style={styles.button} onPress={() => alert('Agregado!')}>
-                <Text>Agregar</Text>
+                <Text style={{color:'#CB361E'}}>PEDIR</Text>
                 <Icon name="cart" style={styles.icon}/>
             </Button>
         </View>
@@ -29,66 +31,60 @@ export default class Principal extends Component < {} > {
 
     render(){
         return(
-            <View>
-                <View style={{flexDirection:'row', height: '50%'}} >
-                    <TouchableOpacity style={{height: '100%', width: '50%'}} onPress={() => this.setState({visibleModal: 1})} >
-                        <View style={{backgroundColor: '#CB361E'}}>
-                            <Image
-                                styleName="large"
-                                source={{uri: 'http://cerveceriaallende.mx/wp-content/uploads/2016/02/BrownAleFinal2.png'}}
-                                style={{height: '100%', justifyContent:'center', alignItems:'center', width: '100%'}}
-                            >
-                            </Image>
-                        </View>
-                    </TouchableOpacity>
+            <View style={{flex:1}}>
+                <Encabezado/>
+                <ScrollView >
+
+                    <View style={{flexDirection:'row', height: '50%'}} >
+                        <TouchableOpacity style={{height: '100%', width: '50%'}} onPress={() => this.setState({visibleModal: 1})} >
+                            <Card style={{backgroundColor:'#CB361E'}}>
+                                    <Image source={{uri: 'http://cerveceriaallende.mx/wp-content/uploads/2016/02/BrownAleFinal2.png'}} style={{height: 200, width: null}}/>
+                            </Card>
+                        </TouchableOpacity>
 
 
-                    <TouchableOpacity style={{height: '100%', width: '50%'}} >
-                        <View style={{backgroundColor: '#CA5C0A'}}>
-                            <Image
-                                styleName="large"
-                                source={{uri: 'http://cerveceriaallende.mx/wp-content/uploads/2016/02/GoldenAleFinal2.png'}}
-                                style={{height: '100%', justifyContent:'center', alignItems:'center', width: '100%'}}
-                            >
-                            </Image>
-                        </View>
-                    </TouchableOpacity>
+                        <TouchableOpacity style={{height: '100%', width: '50%'}} >
+                            <Card style={{backgroundColor: '#CA5C0A'}}>
+                                <Image
+                                    source={{uri: 'http://cerveceriaallende.mx/wp-content/uploads/2016/02/GoldenAleFinal2.png'}}
+                                    style={{height: 200, width: null}}
+                                />
+                            </Card>
+                        </TouchableOpacity>
 
+                    </View>
 
+                    <View style={{flexDirection:'row', height: '50%'}} >
 
-                </View>
+                        <TouchableOpacity style={{height: '100%', width: '50%'}} >
+                            <Card style={{backgroundColor: '#06231B'}}>
+                                <Image
+                                    source={{uri: 'http://cerveceriaallende.mx/wp-content/uploads/2014/08/AgaveFinal2.png'}}
+                                    style={{height: 200, width: null}}
+                                >
+                                </Image>
+                            </Card>
+                        </TouchableOpacity>
 
-                <View style={{flexDirection:'row', height: '50%'}} >
+                        <TouchableOpacity style={{height: '100%', width: '50%'}} >
+                            <Card style={{backgroundColor: '#BA3812'}}>
+                                <Image
+                                    source={{uri: 'http://cerveceriaallende.mx/wp-content/uploads/2016/02/IpaFinal2.png'}}
+                                    style={{height: 200, width: null}}
+                                >
+                                </Image>
+                            </Card>
+                        </TouchableOpacity>
+                    </View>
+                </ScrollView>
+                    <Modal
+                        isVisible={this.state.visibleModal === 1}
+                        onBackdropPress={() => this.setState({visibleModal: null})}
+                        animationIn={'slideInLeft'}
+                        animationOut={'fadeOut'}>
+                        {this._renderModalContent()}
+                    </Modal>
 
-                    <TouchableOpacity style={{height: '100%', width: '50%'}} >
-                        <View style={{backgroundColor: '#06231B'}}>
-                            <Image
-                                styleName="large"
-                                source={{uri: 'http://cerveceriaallende.mx/wp-content/uploads/2014/08/AgaveFinal2.png'}}
-                                style={{height: '100%', justifyContent:'center', alignItems:'center', width: '100%'}}
-                            >
-                            </Image>
-                        </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={{height: '100%', width: '50%'}} >
-                        <View style={{backgroundColor: '#BA3812'}}>
-                            <Image
-                                styleName="large"
-                                source={{uri: 'http://cerveceriaallende.mx/wp-content/uploads/2016/02/IpaFinal2.png'}}
-                                style={{height: '100%', justifyContent:'center', alignItems:'center', width: '100%'}}
-                            >
-                            </Image>
-                        </View>
-                    </TouchableOpacity>
-                </View>
-                <Modal
-                    isVisible={this.state.visibleModal === 1}
-                    onBackdropPress={() => this.setState({visibleModal: null})}
-                    animationIn={'slideInLeft'}
-                    animationOut={'fadeOut'}>
-                    {this._renderModalContent()}
-                </Modal>
             </View>
 
 
@@ -102,7 +98,7 @@ const styles = StyleSheet.create({
     },
     view3: {
         width: 200,
-        height: 200,
+        height: 400,
         alignSelf: 'center',
         backgroundColor: 'white'
     },
@@ -144,13 +140,14 @@ const styles = StyleSheet.create({
     },
     img2: {
         width: '100%',
-        height: 150
+        height: '100%'
     },
     button: {
         alignSelf: 'center',
         borderColor: 'white'
+
     },
     icon: {
-        color: "green"
+        color: '#CB361E'
     }
 });
