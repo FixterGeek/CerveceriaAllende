@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
-import {Container, List, ListItem, Thumbnail, Body, Right, Icon} from 'native-base';
+import {Container, List, ListItem, Thumbnail, Body, Right} from 'native-base';
 import {Actions} from 'react-native-router-flux';
 
 export default class Login extends Component < {} > {
