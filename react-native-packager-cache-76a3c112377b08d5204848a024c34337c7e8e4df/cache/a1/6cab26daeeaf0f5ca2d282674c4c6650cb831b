@@ -23,6 +23,22 @@ var _Recover = require('./components/login/Recover');
 
 var _Recover2 = _interopRequireDefault(_Recover);
 
+var _Principal = require('./components/principal/Principal');
+
+var _Principal2 = _interopRequireDefault(_Principal);
+
+var _Detalle = require('./components/detalle/Detalle');
+
+var _Detalle2 = _interopRequireDefault(_Detalle);
+
+var _Detalle3 = require('./components/detalle/Detalle2');
+
+var _Detalle4 = _interopRequireDefault(_Detalle3);
+
+var _ProductosList = require('./components/principal/ProductosList');
+
+var _ProductosList2 = _interopRequireDefault(_ProductosList);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Routes = function Routes() {
@@ -31,7 +47,7 @@ var Routes = function Routes() {
     {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 14
       }
     },
     _react2.default.createElement(
@@ -39,29 +55,49 @@ var Routes = function Routes() {
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 15
         }
       },
       _react2.default.createElement(
         _reactNativeRouterFlux.Scene,
         { key: 'root', __source: {
             fileName: _jsxFileName,
-            lineNumber: 12
+            lineNumber: 16
           }
         },
         _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'Log', header: null, component: _Log2.default, __source: {
             fileName: _jsxFileName,
-            lineNumber: 13
+            lineNumber: 17
           }
         }),
         _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'Login', header: null, component: _Login2.default, __source: {
             fileName: _jsxFileName,
-            lineNumber: 14
+            lineNumber: 18
           }
         }),
-        _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'Recover', header: null, component: _Recover2.default, initial: true, __source: {
+        _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'Recover', header: null, component: _Recover2.default, __source: {
             fileName: _jsxFileName,
-            lineNumber: 15
+            lineNumber: 19
+          }
+        }),
+        _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'Principal', header: null, component: _Principal2.default, initial: true, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20
+          }
+        }),
+        _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'ProductosList', header: null, component: _ProductosList2.default, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          }
+        }),
+        _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'Detalle', header: null, component: _Detalle2.default, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22
+          }
+        }),
+        _react2.default.createElement(_reactNativeRouterFlux.Scene, { key: 'Detalle2', header: null, component: _Detalle4.default, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
           }
         })
       )

@@ -7,6 +7,7 @@ import Recover from './components/login/Recover';
 import Principal from './components/principal/Principal';
 import Detalle from './components/detalle/Detalle';
 import Detalle2 from './components/detalle/Detalle2';
+import ProductosList from "./components/principal/ProductosList";
 
 const Routes = () => {
   return (
@@ -17,6 +18,7 @@ const Routes = () => {
         <Scene key="Login" header={null} component={Login}/>
         <Scene key="Recover" header={null} component={Recover}/>
         <Scene key="Principal" header={null} component={Principal} initial/>
+        <Scene key="ProductosList" header={null} component={ProductosList} />
         <Scene key="Detalle" header={null} component={Detalle}/>
         <Scene key="Detalle2" header={null} component={Detalle2}/>
       </Scene>

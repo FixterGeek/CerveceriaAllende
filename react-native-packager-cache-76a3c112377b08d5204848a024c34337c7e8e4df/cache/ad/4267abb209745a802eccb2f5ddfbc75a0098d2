@@ -1,5 +1,5 @@
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _react2 = require('react');
@@ -35,83 +35,83 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-    Inicio: {
-        displayName: 'Inicio'
-    }
+  Inicio: {
+    displayName: 'Inicio'
+  }
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: '/home/jose/V\xEDdeos/CerveceriaAllende/src/components/login/Log.js',
-    components: _components,
-    locals: [module],
-    imports: [_react3.default]
+  filename: '/home/jose/V\xEDdeos/CerveceriaAllende/src/components/login/Log.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
 });
 
 function _wrapComponent(id) {
-    return function (Component) {
-        return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
-    };
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
 }
 
 var Inicio = _wrapComponent('Inicio')(function (_Component) {
-    _inherits(Inicio, _Component);
+  _inherits(Inicio, _Component);
 
-    function Inicio() {
-        var _ref;
+  function Inicio() {
+    var _ref;
 
-        var _temp, _this, _ret;
+    var _temp, _this, _ret;
 
-        _classCallCheck(this, Inicio);
+    _classCallCheck(this, Inicio);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Inicio.__proto__ || Object.getPrototypeOf(Inicio)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            loggedIn: null
-        }, _temp), _possibleConstructorReturn(_this, _ret);
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
 
-    _createClass(Inicio, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            var _this2 = this;
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Inicio.__proto__ || Object.getPrototypeOf(Inicio)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      loggedIn: null
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
 
-            _Firebase.firebaseAuth.onAuthStateChanged(function (user) {
-                if (user) {
-                    _this2.setState({ loggedIn: true });
-                } else {
-                    _this2.setState({ loggedIn: false });
-                }
-            });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react3.default.createElement(
-                _nativeBase.Container,
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 24
-                    }
-                },
-                this.state.loggedIn ? _react3.default.createElement(_Principal2.default, {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 26
-                    }
-                }) : _react3.default.createElement(_Login2.default, {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 27
-                    }
-                })
-            );
-        }
-    }]);
+  _createClass(Inicio, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var _this2 = this;
 
-    return Inicio;
+      _Firebase.firebaseAuth.onAuthStateChanged(function (user) {
+        if (user) {
+          _this2.setState({ loggedIn: true });
+        } else {
+          _this2.setState({ loggedIn: false });
+        }
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        _nativeBase.Container,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          }
+        },
+        this.state.loggedIn ? _react3.default.createElement(_Principal2.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27
+          }
+        }) : _react3.default.createElement(_Login2.default, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28
+          }
+        })
+      );
+    }
+  }]);
+
+  return Inicio;
 }(_react2.Component));
 
 exports.default = Inicio;

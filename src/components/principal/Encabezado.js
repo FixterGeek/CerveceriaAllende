@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
-import {Header, Input} from 'native-base';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {Header, Input, Right, Icon} from 'native-base';
 import {Actions} from 'react-native-router-flux';
 
 const Encabezado = (props) => {
@@ -11,6 +11,11 @@ const Encabezado = (props) => {
           uri: 'http://cerveceriaallende.mx/wp-content/uploads/2015/05/logo.png'
         }}/>
     </View>
+      <Right>
+        <TouchableOpacity >
+          <Icon name='ios-cart' style={{color:'white'}}/>
+        </TouchableOpacity>
+      </Right>
   </Header>
   );
 };
@@ -19,7 +24,7 @@ export default Encabezado;
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: "#CB361E",
+    backgroundColor: "red",
     justifyContent: "center"
   },
   view: {

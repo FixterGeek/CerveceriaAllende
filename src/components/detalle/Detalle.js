@@ -1,125 +1,62 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
+import {StyleSheet, Text, View, ScrollView, Image, TextInput, StatusBar} from 'react-native';
 import {Container, List, ListItem, Thumbnail, Body, Right} from 'native-base';
 import {Actions} from 'react-native-router-flux';
+import Cabecera from "./Cabecera";
+
 
 export default class Login extends Component < {} > {
   render(){
+      const {p} = this.props;
     return(
       <Container style={styles.back}>
+
+        <Cabecera/>
+        <StatusBar backgroundColor="red" barStyle="light-content"/>
         <ScrollView>
         <List>
           <ListItem onPress={() => Actions.Detalle2()}>
             <Thumbnail
               style={styles.img}
-              source={{
-                uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'}}/>
+              source={{uri: p.imag1}}/>
             <Body style={styles.margin}>
-              <Text>Pedido 1</Text>
-              <Text note>Mar 31 de Oct</Text>
+              <Text>{p.titulo}</Text>
+              <Text>Cantidad</Text>
+            <TextInput
+                keyboardType='numeric'
+            />
             </Body>
-            <Right>
-              <Text>Status: Enviado</Text>
-            </Right>
+            <Right/>
           </ListItem>
 
           <ListItem>
             <Thumbnail
               style={styles.img}
-              source={{
-                uri: 'https://s3.amazonaws.com/kichink/items_656238_246443_20150615135424_b.jpg'}}/>
+              source={{uri: p.imag2}}/>
             <Body style={styles.margin}>
               <Text>Pedido 1</Text>
-              <Text note>Mar 31 de Oct</Text>
+              <Text>Cantidad</Text>
+              <TextInput
+                  keyboardType='numeric'
+              />
             </Body>
-            <Right>
-              <Text>Status: Entregado</Text>
-            </Right>
+            <Right/>
           </ListItem>
 
           <ListItem>
             <Thumbnail
               style={styles.img}
-              source={{
-                uri: 'https://s3.amazonaws.com/kichink/items_678439_246443_20150703132445_b.jpg'}}/>
+              source={{uri: p.imag3}}/>
             <Body style={styles.margin}>
               <Text>Pedido 1</Text>
-              <Text note>Mar 31 de Oct</Text>
+              <Text>Cantidad</Text>
+              <TextInput
+                  keyboardType='numeric'
+              />
             </Body>
-            <Right>
-              <Text>Status: Enviado</Text>
-            </Right>
+            <Right/>
           </ListItem>
 
-          <ListItem>
-            <Thumbnail
-              style={styles.img}
-              source={{
-                uri: 'https://s3.amazonaws.com/kichink/items_656297_246443_20150615143234_b.jpg'}}/>
-            <Body style={styles.margin}>
-              <Text>Pedido 1</Text>
-              <Text note>Mar 31 de Oct</Text>
-            </Body>
-            <Right>
-              <Text>Status: Recibido</Text>
-            </Right>
-          </ListItem>
-
-          <ListItem>
-            <Thumbnail
-              style={styles.img}
-              source={{
-                uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'}} />
-            <Body style={styles.margin}>
-              <Text>Pedido 1</Text>
-              <Text note>Mar 31 de Oct</Text>
-            </Body>
-            <Right>
-              <Text>Status: Enviado</Text>
-            </Right>
-          </ListItem>
-
-          <ListItem>
-            <Thumbnail
-              style={styles.img}
-              source={{
-                uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'}} />
-            <Body style={styles.margin}>
-              <Text>Pedido 1</Text>
-              <Text note>Mar 31 de Oct</Text>
-            </Body>
-            <Right>
-              <Text>Status: Entregado</Text>
-            </Right>
-          </ListItem>
-
-          <ListItem>
-            <Thumbnail
-              style={styles.img}
-              source={{
-                uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'}}/>
-            <Body style={styles.margin}>
-              <Text>Pedido 1</Text>
-              <Text note>Mar 31 de Oct</Text>
-            </Body>
-            <Right>
-              <Text>Status: Enviado</Text>
-            </Right>
-          </ListItem>
-
-          <ListItem>
-            <Thumbnail
-              style={styles.img}
-              source={{
-                uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'}}/>
-            <Body style={styles.margin}>
-              <Text>Pedido 1</Text>
-              <Text note>Mar 31 de Oct</Text>
-            </Body>
-            <Right>
-              <Text>Status: Enviado</Text>
-            </Right>
-          </ListItem>
         </List>
         </ScrollView>
       </Container>
