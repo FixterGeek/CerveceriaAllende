@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, StatusBar} from 'react-native';
 import {Button, Input, Item, Icon, Spinner, Toast} from 'native-base';
-import firebase, {firebaseAuth} from '../firebase/Firebase';
+import firebase, {firebaseAuth} from '../firebase/firebase';
 import {Actions} from 'react-native-router-flux';
 import Video from 'react-native-video';
 import videopp from '../../assets/video/videopp.mp4';

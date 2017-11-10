@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, ImageBackground} from 'react-native';
 import {Button, Input, Item, Toast, Spinner, Icon} from 'native-base';
 import {Actions} from 'react-native-router-flux';
 import imgb from '../../assets/imgs/imgb.jpg'
-import firebase, {firebaseAuth} from '../firebase/Firebase';
+import firebase, {firebaseAuth} from '../firebase/firebase';
 
 export default class Registro extends Component <{}> {
   state = {

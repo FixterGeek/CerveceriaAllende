@@ -6,22 +6,20 @@ import ProductosList from "./ProductosList";
 import Encabezado from "./Encabezado";
 
 class Principal extends Component {
-    render(){
-
-        return(
-            <Container style={{backgroundColor: '#BDBDBD'}}>
-              <Encabezado/>
-              <ProductosList />
-
-            </Container>
-        );
-    };
+  render() {
+    return (
+      <Container style={{
+        backgroundColor: '#BDBDBD'
+      }}>
+        <Encabezado/>
+        <ProductosList/>
+      </Container>
+    );
+  };
 };
 
 function mapStateToProps({reducer}) {
-    return {reducer}
+  return {reducer}
 }
 
-
 export default Principal = connect(mapStateToProps)(Principal);
-
