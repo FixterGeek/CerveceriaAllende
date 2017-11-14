@@ -26,6 +26,10 @@ var _Login = require('./Login');
 
 var _Login2 = _interopRequireDefault(_Login);
 
+var _Inventario = require('../principal/Inventario');
+
+var _Inventario2 = _interopRequireDefault(_Inventario);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -93,18 +97,18 @@ var Inicio = _wrapComponent('Inicio')(function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 25
           }
         },
-        this.state.loggedIn ? _react3.default.createElement(_Principal2.default, {
+        this.state.loggedIn ? _react3.default.createElement(_Inventario2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 28
           }
         }) : _react3.default.createElement(_Login2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 29
           }
         })
       );

@@ -1,0 +1,5 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var PEDIDO_UPDATE = exports.PEDIDO_UPDATE = 'pedido_update';
+var PEDIDO_CREATE = exports.PEDIDO_CREATE = 'pedido_create';

@@ -3,6 +3,7 @@ import {firebaseAuth} from '../firebase/Firebase';
 import {Spinner, Container} from 'native-base';
 import Principal from '../principal/Principal';
 import Login from './Login';
+import Inventario from "../principal/Inventario";
 
 class Inicio extends Component {
   state = {
