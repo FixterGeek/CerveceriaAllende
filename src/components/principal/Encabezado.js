@@ -12,7 +12,7 @@ const Encabezado = (props) => {
         }}/>
     </View>
       <Right>
-        <TouchableOpacity onPress={() => Actions.Orden()}>
+        <TouchableOpacity onPress={() => Actions.Detalle()}>
           <Icon name='ios-cart' style={{color:'white'}}/>
         </TouchableOpacity>
       </Right>

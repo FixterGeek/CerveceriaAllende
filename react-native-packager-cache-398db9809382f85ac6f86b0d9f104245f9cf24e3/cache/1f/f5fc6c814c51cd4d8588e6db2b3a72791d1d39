@@ -100,7 +100,7 @@ var Inicio = _wrapComponent('Inicio')(function (_Component) {
             lineNumber: 25
           }
         },
-        this.state.loggedIn ? _react3.default.createElement(_Inventario2.default, {
+        this.state.loggedIn ? _react3.default.createElement(_Principal2.default, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 28

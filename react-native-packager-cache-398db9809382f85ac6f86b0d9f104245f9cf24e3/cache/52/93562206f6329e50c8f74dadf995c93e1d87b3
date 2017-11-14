@@ -49,7 +49,7 @@ var Encabezado = function Encabezado(props) {
       _react2.default.createElement(
         _reactNative.TouchableOpacity,
         { onPress: function onPress() {
-            return _reactNativeRouterFlux.Actions.Orden();
+            return _reactNativeRouterFlux.Actions.Detalle();
           }, __source: {
             fileName: _jsxFileName,
             lineNumber: 15
