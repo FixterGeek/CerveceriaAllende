@@ -1,5 +1,5 @@
-import firebase from '../components/firebase/firebase';
-import * as fireMethods from '../components/firebase/firebase';
+import firebase from '../components/firebase/Firebase';
+import * as fireMethods from '../components/firebase/Firebase';
 
 export function loadListaSuccess(lista) {
   return {type: 'LOAD_LISTA_SUCCESS', lista}

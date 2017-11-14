@@ -14,10 +14,10 @@ const Routes = () => {
     <Root>
     <Router>
       <Scene key="root">
-        <Scene key="Log" header={null} component={Log}/>
+        <Scene key="Log" header={null} component={Log} initial/>
         <Scene key="Login" header={null} component={Login}/>
         <Scene key="Recover" header={null} component={Recover}/>
-        <Scene key="Principal" header={null} component={Principal} initial/>
+        <Scene key="Principal" header={null} component={Principal} />
         <Scene key="ProductosList" header={null} component={ProductosList} />
         <Scene key="Detalle" header={null} component={Detalle}/>
         <Scene key="Orden" header={null} component={Orden}/>

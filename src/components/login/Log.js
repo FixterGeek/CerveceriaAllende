@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {firebaseAuth} from '../firebase/firebase';
+import {firebaseAuth} from '../firebase/Firebase';
 import {Spinner, Container} from 'native-base';
 import Principal from '../principal/Principal';
 import Login from './Login';

@@ -1,0 +1,152 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Cardd = undefined;
+
+var _jsxFileName = '/home/jose/Escritorio/cerve/CerveceriaAllende/src/components/principal/Card.js',
+    _this = this;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var _nativeBase = require('native-base');
+
+var _reactNativeRouterFlux = require('react-native-router-flux');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Cardd = exports.Cardd = function Cardd(_ref) {
+  var index = _ref.index,
+      p = _ref.p;
+
+
+  detalleView = function detalleView() {
+    _reactNativeRouterFlux.Actions.Detalle({ p: p });
+  };
+
+  var imagen = p.imagen,
+      titulo = p.titulo;
+
+
+  return _react2.default.createElement(
+    _reactNative.TouchableOpacity,
+    { onPress: _this.detalleView, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      }
+    },
+    _react2.default.createElement(
+      _nativeBase.Card,
+      { style: styles.cardP, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        }
+      },
+      _react2.default.createElement(
+        _nativeBase.CardItem,
+        { style: styles.cardItemS, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17
+          }
+        },
+        _react2.default.createElement(
+          _reactNative.Text,
+          { style: styles.textTitle, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            }
+          },
+          titulo
+        )
+      ),
+      _react2.default.createElement(
+        _nativeBase.CardItem,
+        { cardBody: 'cardBody', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21
+          }
+        },
+        _react2.default.createElement(_reactNative.ImageBackground, { source: {
+            uri: imagen
+          }, style: styles.cardImagen, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23
+          }
+        })
+      )
+    )
+  );
+};
+
+exports.default = Cardd;
+
+
+var styles = _reactNative.StyleSheet.create({
+  cardP: {
+    flex: 0,
+    width: '95%',
+    alignSelf: 'center',
+    marginTop: 10
+  },
+  cardItemS: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  textTitle: {
+    fontSize: 20,
+    fontWeight: 'bold'
+  },
+  cardImagen: {
+    height: 300,
+    width: '100%',
+    flex: 1,
+    justifyContent: 'space-between'
+  },
+  viewShadow: {
+    height: 60,
+    width: null,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    padding: 5
+  },
+  viewCat: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#8a3979',
+    borderRadius: 5
+  },
+  icon: {
+    color: 'white',
+    fontSize: 14,
+    marginLeft: 5,
+    width: 15
+  },
+  textCat: {
+    color: 'white',
+    margin: 5
+  },
+  viewNew: {
+    backgroundColor: 'rgba(0,0,0,.7)',
+    height: 60,
+    width: null,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 5
+  },
+  center: {
+    alignSelf: 'center'
+  },
+  textito: {
+    color: 'white'
+  },
+  textEnd: {
+    color: 'white',
+    alignSelf: 'center'
+  }
+});
