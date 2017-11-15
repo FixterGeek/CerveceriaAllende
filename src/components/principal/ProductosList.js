@@ -6,40 +6,35 @@ import Card from './Card';
 import {Content} from 'native-base';
 
 class ProductosList extends Component {
-    state={
-        allProductos:[]
-    };
+  state = {
+    allProductos: []
+  };
 
-    componentWillMount(){
-        const {allProductos} = this.props;
-        this.setState({allProductos});
-    };
+  componentWillMount() {
+    const {allProductos} = this.props;
+    this.setState({allProductos});
+  };
 
-    render(){
-        const {allProductos} = this.state;
-        return(
-
-            <Content>
-                <StatusBar backgroundColor="red" barStyle="light-content"/>
-                {allProductos.map((p, index)=>{
-                    return <Card
-                        key={index}
-                        index={index}
-                        p={p}
-                    />
-                })}
-            </Content>
-
-        );
-    };
+  render() {
+    const {allProductos} = this.state;
+    return (
+      <Content>
+        {
+          allProductos.map((p, index) => {
+            return <Card key={index} index={index} p={p}/>
+          })
+        }
+      </Content>
+    );
+  };
 };
 
 function mapStateToProps(state, ownProps) {
-    return {allProductos: state.productos.allProductos};
+  return {allProductos: state.productos.allProductos};
 }
 
 function mapDispatchToProps(dispatch) {
-    return {actions: bindActionCreators(dispatch)};
+  return {actions: bindActionCreators(dispatch)};
 }
 
 export default ProductosList = connect(mapStateToProps, mapDispatchToProps)(ProductosList);

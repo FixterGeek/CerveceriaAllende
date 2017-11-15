@@ -1,10 +1,8 @@
 import {combineReducers} from 'redux';
-import productosReducer from './productosReducer';
-import PedidoReducer from "./PedidoReducer";
-import ListaReducer from "./ListaReducer";
+import PedidoReducer from './PedidoReducer';
+import ListaReducer from './Lista';
 
 const rootReducer = combineReducers({
-    productos: productosReducer,
     pedidoForm: PedidoReducer,
     lista:ListaReducer
 });

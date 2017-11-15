@@ -73,48 +73,48 @@ export default class Login extends Component <{}> {
   render() {
     return (
       <View style={styles.img}>
-      <StatusBar backgroundColor="orange" barStyle="light-content"/>
-      <Video source={videopp} rate={1.0} muted={true} resizeMode={"cover"} repeat style={styles.video}/>
+        <StatusBar backgroundColor="orange" barStyle="light-content"/>
+        <Video source={videopp} rate={1.0} muted={true} resizeMode={"cover"} repeat style={styles.video}/>
 
-      <View>
-        <Item style={styles.inputRounded}>
-          <Input
-            name="correo"
-            placeholder="Correo electrónico"
-            keyboardType='email-address'
-            placeholderTextColor='#fff'
-            returnKeyType='next'
-            autoCapitalize='none'
-            style={styles.color}
-            value={this.state.correo}
-            onChangeText={value => this.handleChange("correo", value)}/>
-        </Item>
+        <View>
+          <Item style={styles.inputRounded}>
+            <Input
+              name="correo"
+              placeholder="Correo electrónico"
+              keyboardType='email-address'
+              placeholderTextColor='#fff'
+              returnKeyType='next'
+              autoCapitalize='none'
+              style={styles.color}
+              value={this.state.correo}
+              onChangeText={value => this.handleChange("correo", value)}/>
+          </Item>
 
-        <Item style={styles.inputRounded}>
-          <Input
-            name="password"
-            placeholder="Contraseña"
-            secureTextEntry={true}
-            placeholderTextColor='#fff'
-            style={styles.color}
-            value={this.state.password}
-            onChangeText={value => this.handleChange("password", value)}/>
-        </Item>
+          <Item style={styles.inputRounded}>
+            <Input
+              name="password"
+              placeholder="Contraseña"
+              secureTextEntry={true}
+              placeholderTextColor='#fff'
+              style={styles.color}
+              value={this.state.password}
+              onChangeText={value => this.handleChange("password", value)}/>
+          </Item>
 
-        {this.spinnerInicio()}
-      </View>
+          {this.spinnerInicio()}
+        </View>
 
-      <View style={styles.view2}>
-        <View style={styles.view3}>
-          <View style={styles.view}>
-            <TouchableOpacity onPress={() => Actions.Recover()}>
-              <Text style={styles.text}>¿Olvidaste tu Contraseña?</Text>
-            </TouchableOpacity>
+        <View style={styles.view2}>
+          <View style={styles.view3}>
+            <View style={styles.view}>
+              <TouchableOpacity onPress={() => Actions.Recover()}>
+                <Text style={styles.text}>¿Olvidaste tu Contraseña?</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </View>
-
-    </View>);
+    );
   };
 };
 

@@ -11,10 +11,3 @@ const config = {
 firebase.initializeApp(config);
 export const firebaseAuth = firebase.auth();
 export default firebase;
-
-export function saveItem(item) {
-  return firebase.database().ref('lista').push(item).then(s => {
-    item['id'] = s.key;
-    return item;
-  }).catch(e => console.log(e))
-}

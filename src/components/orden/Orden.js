@@ -1,41 +1,52 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
-import {Container, List, ListItem, Button} from 'native-base';
-import {Actions} from 'react-native-router-flux';
-import Cabecera from "./Cabecera";
-import {store} from '../../../index';
+import {StyleSheet, Text} from 'react-native';
+import {Container, Content, ListItem, Thumbnail, Body} from 'native-base';
+import {connect} from 'react-redux';
+import {listaFetch} from '../../actions/Lista';
+import _ from 'lodash';
+import Cabecera from './Cabecera';
 
-export default class Login extends Component < {} > {
-  state = {
-    lista: []
-  }
-
+class Orden extends Component {
   componentWillMount() {
-    this.setState({lista: store.getState().lista})
-    this.unsubscribe = store.subscribe(() => {
-      const {lista} = store.getState();
-      this.setState({lista});
-    })
+    this.props.listaFetch();
   }
+
   render() {
-    const {lista, text} = this.state;
+    const {lista} = this.props;
+
     return (
       <Container style={styles.back}>
-      <Cabecera/>
-      <ScrollView>
-        <View>
+        <Cabecera/>
+        <Content>
           {
-            lista.map((i, index) => {
-              return (<View key={index}>
-                <Text>{i.name}</Text>
-              </View>)
+            lista.map((lista, index) => {
+              return (
+                <ListItem key={index}>
+                  <Thumbnail square size={80} source={{
+                      uri: lista.image
+                    }}/>
+                  <Body>
+                    <Text>{lista.descripcion}</Text>
+                    <Text note="note">{lista.producto}</Text>
+                  </Body>
+                </ListItem>
+              )
             })
           }
-        </View>
-      </ScrollView>
-    </Container>
+        </Content>
+      </Container>
     );
-  };
+  }
+}
+
+const mapStateToProps = state => {
+  const lista = _.map(state.lista, (val, uid) => {
+    return {
+      ...val,
+      uid
+    };
+  });
+  return {lista};
 };
 
 const styles = StyleSheet.create({
@@ -43,3 +54,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'white'
   }
 });
+
+export default connect(mapStateToProps, {listaFetch})(Orden);
