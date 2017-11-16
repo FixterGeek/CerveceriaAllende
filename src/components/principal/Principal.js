@@ -13,9 +13,7 @@ class Principal extends Component {
         <Encabezado/>
 
         <Card style={styles.card}>
-          <ImageBackground source={{
-              uri: 'http://cerveceriaallende.mx/wp-content/uploads/2016/04/4-copia.jpg'
-            }} style={styles.img}>
+          <ImageBackground source={require('../../assets/imgs/image.jpg')} style={styles.img}>
             <View style={styles.view}>
               <Text onPress={() => Actions.Inventario()} style={styles.text}>Ordenar</Text>
             </View>
@@ -23,9 +21,7 @@ class Principal extends Component {
         </Card>
 
         <Card style={styles.card}>
-          <ImageBackground source={{
-              uri: 'http://cerveceriaallende.mx/wp-content/uploads/2016/04/5-copia.jpg'
-            }} style={styles.img}>
+          <ImageBackground source={require('../../assets/imgs/image1.jpg')} style={styles.img}>
             <View style={styles.view}>
               <Text onPress={() => Actions.Orden()} style={styles.text}>Ver Ordenes</Text>
             </View>
@@ -49,10 +45,12 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   text: {
-    fontSize: 40
+    fontSize: 40,
+    color: 'white',
+    marginTop: 80
   },
   view: {
-    alignSelf: 'center'
+    alignSelf: 'center',
   }
 });
 
