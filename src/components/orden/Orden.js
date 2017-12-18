@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, StatusBar} from 'react-native';
 import {Container, Content, ListItem, Thumbnail, Body} from 'native-base';
 import {connect} from 'react-redux';
 import {listaFetch} from '../../actions/Lista';
 import _ from 'lodash';
-import Cabecera from './Cabecera';
+import {Cabecera} from './Cabecera';
 
 class Orden extends Component {
   componentWillMount() {
@@ -16,8 +16,9 @@ class Orden extends Component {
 
     return (
       <Container style={styles.back}>
-        <Cabecera/>
+        <Cabecera headerText={"LISTA DE ORDENES"} />
         <Content>
+          <StatusBar backgroundColor="orange" barStyle="light-content"/>
           {
             lista.map((lista, index) => {
               return (

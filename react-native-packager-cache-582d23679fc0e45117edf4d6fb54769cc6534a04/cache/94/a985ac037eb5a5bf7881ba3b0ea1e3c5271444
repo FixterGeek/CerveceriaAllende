@@ -1,0 +1,15 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _PedidosActions = require('./PedidosActions');
+
+Object.keys(_PedidosActions).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _PedidosActions[key];
+    }
+  });
+});

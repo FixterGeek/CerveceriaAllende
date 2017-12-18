@@ -1,35 +1,34 @@
 import React, {Component} from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, TouchableOpacity, Text, View} from 'react-native';
 import {Header, Left, Icon, Body, Right} from 'native-base';
 import {Actions} from 'react-native-router-flux';
 
-export default class Cabecera extends Component {
-  render() {
+const Cabecera = ({headerText}) => {
     return (
       <Header style={styles.header}>
-        <Left>
           <TouchableOpacity onPress={() => Actions.pop()}>
             <Icon name='ios-arrow-back' style={styles.color}/>
           </TouchableOpacity>
-        </Left>
-        <Body>
-          <Text style={styles.text}>ARMA TU PEDIDO</Text>
-        </Body>
-        <Right/>
+          <View>
+          <Text style={styles.text}>{headerText}</Text>
+          </View>
+
+          <View />
       </Header>
     );
-  }
-}
-
+  };
+export {Cabecera}
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: "white"
+      backgroundColor:'white',
+      justifyContent:'space-between',
+      alignItems:'center'
   },
   color: {
-    color: "#252525"
+    color: "#252525",
+      padding:10,
   },
   text: {
-    alignSelf: 'center',
-    color: 'white'
+    color: "#252525"
   }
 });

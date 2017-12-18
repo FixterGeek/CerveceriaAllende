@@ -1,0 +1,46 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.loadListaSuccess = loadListaSuccess;
+exports.addItemListSuccess = addItemListSuccess;
+exports.loadLista = loadLista;
+exports.addItemList = addItemList;
+
+var _Firebase = require('../components/firebase/Firebase');
+
+var fireMethods = _interopRequireWildcard(_Firebase);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function loadListaSuccess(lista) {
+  return { type: 'LOAD_LISTA_SUCCESS', lista: lista };
+}
+
+function addItemListSuccess(item) {
+  return { type: "ADD_ITEM_LIST", item: item };
+}
+
+function loadLista() {
+  return function (dispatch, getState) {
+    fireMethods.default.database().ref('lista').once("value").then(function (s) {
+      var lista = [];
+      var obj = s.val();
+      for (var key in obj) {
+        var nObj = obj[key];
+        nObj['id'] = key;
+        lista.push(nObj);
+      }
+      dispatch(loadListaSuccess(lista));
+    }).catch(function (e) {
+      return console.log(e);
+    });
+  };
+}
+
+function addItemList(item) {
+  return function (dispatch) {
+    fireMethods.saveItem(item).then(function (resItem) {
+      dispatch.addItemListSuccess(resItem);
+    });
+  };
+}

@@ -1,0 +1,173 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../../../node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _jsxFileName = '/home/jose/Escritorio/CERVECERIIIIA/CerveceriaAllende/src/components/orden/Orden.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactNative = require('react-native');
+
+var _nativeBase = require('native-base');
+
+var _reactRedux = require('react-redux');
+
+var _Lista = require('../../actions/Lista');
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _Cabecera = require('./Cabecera');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  Orden: {
+    displayName: 'Orden'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/home/jose/Escritorio/CERVECERIIIIA/CerveceriaAllende/src/components/orden/Orden.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var Orden = _wrapComponent('Orden')(function (_Component) {
+  _inherits(Orden, _Component);
+
+  function Orden() {
+    _classCallCheck(this, Orden);
+
+    return _possibleConstructorReturn(this, (Orden.__proto__ || Object.getPrototypeOf(Orden)).apply(this, arguments));
+  }
+
+  _createClass(Orden, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.props.listaFetch();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var lista = this.props.lista;
+
+
+      return _react3.default.createElement(
+        _nativeBase.Container,
+        { style: styles.back, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18
+          }
+        },
+        _react3.default.createElement(_Cabecera.Cabecera, { headerText: "LISTA DE ORDENES", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+          }
+        }),
+        _react3.default.createElement(
+          _nativeBase.Content,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 20
+            }
+          },
+          _react3.default.createElement(_reactNative.StatusBar, { backgroundColor: 'orange', barStyle: 'light-content', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 21
+            }
+          }),
+          lista.map(function (lista, index) {
+            return _react3.default.createElement(
+              _nativeBase.ListItem,
+              { key: index, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 25
+                }
+              },
+              _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                  uri: lista.image
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 26
+                }
+              }),
+              _react3.default.createElement(
+                _nativeBase.Body,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 29
+                  }
+                },
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 30
+                    }
+                  },
+                  lista.descripcion
+                ),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  { note: 'note', __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 31
+                    }
+                  },
+                  lista.producto
+                )
+              )
+            );
+          })
+        )
+      );
+    }
+  }]);
+
+  return Orden;
+}(_react2.Component));
+
+var mapStateToProps = function mapStateToProps(state) {
+  var lista = _lodash2.default.map(state.lista, function (val, uid) {
+    return _extends({}, val, {
+      uid: uid
+    });
+  });
+  return { lista: lista };
+};
+
+var styles = _reactNative.StyleSheet.create({
+  back: {
+    backgroundColor: 'white'
+  }
+});
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, { listaFetch: _Lista.listaFetch })(Orden);

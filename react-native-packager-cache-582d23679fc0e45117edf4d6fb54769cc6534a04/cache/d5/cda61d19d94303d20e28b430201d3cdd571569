@@ -1,0 +1,22 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.firebaseAuth = undefined;
+
+var _firebase = require("firebase");
+
+var firebase = _interopRequireWildcard(_firebase);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+var config = {
+  apiKey: "AIzaSyAEggDZlKI8w67e_cPG7hFAVKAjvvY9Fqk",
+  authDomain: "cerveceriaallende-56478.firebaseapp.com",
+  databaseURL: "https://cerveceriaallende-56478.firebaseio.com",
+  projectId: "cerveceriaallende-56478",
+  storageBucket: "cerveceriaallende-56478.appspot.com",
+  messagingSenderId: "443694211752"
+};
+firebase.initializeApp(config);
+var firebaseAuth = exports.firebaseAuth = firebase.auth();
+exports.default = firebase;

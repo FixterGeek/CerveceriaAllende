@@ -1,0 +1,1034 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./../../../node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/home/jose/Escritorio/CERVECERIIIIA/CerveceriaAllende/src/components/principal/Inventario.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactNative = require('react-native');
+
+var _nativeBase = require('native-base');
+
+var _reactRedux = require('react-redux');
+
+var _actions = require('../../actions');
+
+var _Cabecera = require('../orden/Cabecera');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  PedidoCreate: {
+    displayName: 'PedidoCreate'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/home/jose/Escritorio/CERVECERIIIIA/CerveceriaAllende/src/components/principal/Inventario.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
+  _inherits(PedidoCreate, _Component);
+
+  function PedidoCreate() {
+    _classCallCheck(this, PedidoCreate);
+
+    return _possibleConstructorReturn(this, (PedidoCreate.__proto__ || Object.getPrototypeOf(PedidoCreate)).apply(this, arguments));
+  }
+
+  _createClass(PedidoCreate, [{
+    key: 'onButtonPress',
+    value: function onButtonPress() {
+      var _props = this.props,
+          cliente = _props.cliente,
+          crojai = _props.crojai,
+          crojas = _props.crojas,
+          crojac = _props.crojac,
+          camarillai = _props.camarillai,
+          camarillas = _props.camarillas,
+          camarillac = _props.camarillac,
+          cnaranjai = _props.cnaranjai,
+          cnaranjas = _props.cnaranjas,
+          cnaranjac = _props.cnaranjac,
+          cverdei = _props.cverdei,
+          cverdes = _props.cverdes,
+          cverdec = _props.cverdec;
+
+
+      this.props.pedidoCreate({
+        cliente: cliente || 'Jose',
+        crojai: crojai,
+        crojas: crojas,
+        crojac: crojac,
+        camarillai: camarillai,
+        camarillas: camarillas,
+        camarillac: camarillac,
+        cnaranjai: cnaranjai,
+        cnaranjas: cnaranjas,
+        cnaranjac: cnaranjac,
+        cverdei: cverdei,
+        cverdes: cverdes,
+        cverdec: cverdec
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react3.default.createElement(
+        _nativeBase.Container,
+        { style: styles.back, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44
+          }
+        },
+        _react3.default.createElement(_Cabecera.Cabecera, { headerText: "ARMA TU PEDIDO", __source: {
+            fileName: _jsxFileName,
+            lineNumber: 45
+          }
+        }),
+        _react3.default.createElement(
+          _nativeBase.Content,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 46
+            }
+          },
+          _react3.default.createElement(_reactNative.StatusBar, { backgroundColor: 'orange', barStyle: 'light-content', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 47
+            }
+          }),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            { avatar: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 48
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Left,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 49
+                }
+              },
+              _react3.default.createElement(_nativeBase.Thumbnail, { source: {
+                  uri: 'https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/19732346_10213092050513215_2022404890484623335_n.jpg?oh=0fd3137405d352a5f144219a877e3ddd&oe=5A96C5BD' }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 50
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 53
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.CardItem,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 54
+                  }
+                },
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 55
+                    }
+                  },
+                  'Cliente'
+                ),
+                _react3.default.createElement(
+                  _reactNative.Picker,
+                  {
+                    style: styles.picker,
+                    selectedValue: this.props.cliente,
+                    onValueChange: function onValueChange(value) {
+                      return _this2.props.pedidoUpdate({ prop: 'cliente', value: value });
+                    }, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 56
+                    }
+                  },
+                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Jose', value: 'Jose', __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 60
+                    }
+                  }),
+                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Saul', value: 'Saul', __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 61
+                    }
+                  }),
+                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Oswaldo', value: 'Oswaldo', __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 62
+                    }
+                  }),
+                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Hector', value: 'Hector', __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 63
+                    }
+                  }),
+                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Brenda', value: 'Brenda', __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 64
+                    }
+                  }),
+                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Miguel', value: 'Miguel', __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 65
+                    }
+                  })
+                )
+              )
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            { itemDivider: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 71
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 72
+                }
+              },
+              'ARTESANAL ROJA'
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 75
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 76
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 80
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 81
+                  }
+                },
+                'Pieza'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 84
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.crojai,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'crojai', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 85
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 94
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_656297_246443_20150615143234_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 95
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 99
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 100
+                  }
+                },
+                'Six'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 103
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.crojas,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'crojas', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 104
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 113
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_678439_246443_20150703132445_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 114
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 118
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 119
+                  }
+                },
+                'Caja'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 122
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.crojac,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'crojac', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 123
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            { itemDivider: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 132
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 133
+                }
+              },
+              'ARTESANAL AMARILLA'
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 136
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 137
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 141
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 142
+                  }
+                },
+                'Pieza'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 145
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.camarillai,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'camarillai', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 146
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 155
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_656297_246443_20150615143234_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 156
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 160
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 161
+                  }
+                },
+                'Six'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 164
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.camarillas,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'camarillas', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 165
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 174
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_678439_246443_20150703132445_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 175
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 179
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 180
+                  }
+                },
+                'Caja'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 183
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.camarillac,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'camarillac', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 184
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            { itemDivider: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 193
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 194
+                }
+              },
+              'ARTESANAL NARANJA'
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 197
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 198
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 202
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 203
+                  }
+                },
+                'Pieza'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 206
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.cnaranjai,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'cnaranjai', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 207
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 216
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_656297_246443_20150615143234_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 217
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 221
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 222
+                  }
+                },
+                'Six'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 225
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.cnaranjas,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'cnaranjas', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 226
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 235
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_678439_246443_20150703132445_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 236
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 240
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 241
+                  }
+                },
+                'Caja'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 244
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.cnaranjac,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'cnaranjac', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 245
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            { itemDivider: true, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 254
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 255
+                }
+              },
+              'ARTESANAL VERDE'
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 258
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 259
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 263
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 264
+                  }
+                },
+                'Pieza'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 267
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.cverdei,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'cverdei', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 268
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 277
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_656297_246443_20150615143234_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 278
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 282
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 283
+                  }
+                },
+                'Six'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 286
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.cverdes,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'cverdes', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 287
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.ListItem,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 296
+              }
+            },
+            _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                uri: 'https://s3.amazonaws.com/kichink/items_678439_246443_20150703132445_b.jpg'
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 297
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              { style: styles.margin, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 301
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 302
+                  }
+                },
+                'Caja'
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 305
+                }
+              },
+              _react3.default.createElement(_reactNative.TextInput, {
+                placeholder: 'Cantidad: 0',
+                value: this.props.cverdec,
+                onChangeText: function onChangeText(value) {
+                  return _this2.props.pedidoUpdate({ prop: 'cverdec', value: value });
+                },
+                keyboardType: 'numeric',
+                style: styles.input, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 306
+                }
+              })
+            )
+          )
+        ),
+        _react3.default.createElement(
+          _nativeBase.Button,
+          { block: true, onPress: this.onButtonPress.bind(this), style: styles.color, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 316
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Text,
+            { style: styles.text, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 317
+              }
+            },
+            'PEDIR'
+          )
+        )
+      );
+    }
+  }]);
+
+  return PedidoCreate;
+}(_react2.Component));
+
+var styles = _reactNative.StyleSheet.create({
+  color: {
+    backgroundColor: '#252525'
+  },
+  picker: {
+    flex: 1
+  },
+  input: {
+    width: 100
+  },
+  text: {
+    color: 'white'
+  },
+  back: {
+    backgroundColor: 'white'
+  },
+  margin: {
+    marginLeft: 10
+  }
+});
+
+var mapStateToProps = function mapStateToProps(state) {
+  var _state$pedidoForm = state.pedidoForm,
+      cliente = _state$pedidoForm.cliente,
+      crojai = _state$pedidoForm.crojai,
+      crojas = _state$pedidoForm.crojas,
+      crojac = _state$pedidoForm.crojac,
+      camarillai = _state$pedidoForm.camarillai,
+      camarillas = _state$pedidoForm.camarillas,
+      camarillac = _state$pedidoForm.camarillac,
+      cnaranjai = _state$pedidoForm.cnaranjai,
+      cnaranjas = _state$pedidoForm.cnaranjas,
+      cnaranjac = _state$pedidoForm.cnaranjac,
+      cverdei = _state$pedidoForm.cverdei,
+      cverdes = _state$pedidoForm.cverdes,
+      cverdec = _state$pedidoForm.cverdec;
+
+
+  return {
+    cliente: cliente,
+    crojai: crojai,
+    crojas: crojas,
+    crojac: crojac,
+    camarillai: camarillai,
+    camarillas: camarillas,
+    camarillac: camarillac,
+    cnaranjai: cnaranjai,
+    cnaranjas: cnaranjas,
+    cnaranjac: cnaranjac,
+    cverdei: cverdei,
+    cverdes: cverdes,
+    cverdec: cverdec
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps, { pedidoUpdate: _actions.pedidoUpdate, pedidoCreate: _actions.pedidoCreate })(PedidoCreate);

@@ -1,0 +1,65 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.pedidoCreate = exports.pedidoUpdate = undefined;
+
+var _types = require('./types');
+
+var _Firebase = require('../components/firebase/Firebase');
+
+var _Firebase2 = _interopRequireDefault(_Firebase);
+
+var _reactNativeRouterFlux = require('react-native-router-flux');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var pedidoUpdate = exports.pedidoUpdate = function pedidoUpdate(_ref) {
+  var prop = _ref.prop,
+      value = _ref.value;
+
+  return {
+    type: _types.PEDIDO_UPDATE,
+    payload: {
+      prop: prop,
+      value: value
+    }
+  };
+};
+
+var pedidoCreate = exports.pedidoCreate = function pedidoCreate(_ref2) {
+  var cliente = _ref2.cliente,
+      crojai = _ref2.crojai,
+      crojas = _ref2.crojas,
+      crojac = _ref2.crojac,
+      camarillai = _ref2.camarillai,
+      camarillas = _ref2.camarillas,
+      camarillac = _ref2.camarillac,
+      cnaranjai = _ref2.cnaranjai,
+      cnaranjas = _ref2.cnaranjas,
+      cnaranjac = _ref2.cnaranjac,
+      cverdei = _ref2.cverdei,
+      cverdes = _ref2.cverdes,
+      cverdec = _ref2.cverdec;
+
+
+  return function (dispatch) {
+    _Firebase2.default.database().ref('/pedidosPrueba').push({
+      cliente: cliente,
+      crojai: crojai,
+      crojas: crojas,
+      crojac: crojac,
+      camarillai: camarillai,
+      camarillas: camarillas,
+      camarillac: camarillac,
+      cnaranjai: cnaranjai,
+      cnaranjas: cnaranjas,
+      cnaranjac: cnaranjac,
+      cverdei: cverdei,
+      cverdes: cverdes,
+      cverdec: cverdec
+    }).then(function () {
+      dispatch({ type: _types.PEDIDO_CREATE });
+      _reactNativeRouterFlux.Actions.Principal();
+    });
+  };
+};

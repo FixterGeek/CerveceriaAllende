@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {Text, Picker, StyleSheet, TextInput} from 'react-native';
+import {Text, Picker, StyleSheet, TextInput, StatusBar} from 'react-native';
 import {CardItem, Button, Thumbnail, Content, Container, ListItem, Body, Left} from 'native-base';
 import {connect} from 'react-redux';
 import {pedidoUpdate, pedidoCreate} from '../../actions';
-import Cabecera from '../orden/Cabecera';
+import {Cabecera} from '../orden/Cabecera';
 
 class PedidoCreate extends Component {
   onButtonPress() {
@@ -42,9 +42,9 @@ class PedidoCreate extends Component {
   render() {
     return (
       <Container style={styles.back}>
-        <Cabecera/>
+        <Cabecera headerText={"ARMA TU PEDIDO"} />
         <Content>
-
+          <StatusBar backgroundColor="orange" barStyle="light-content"/>
           <ListItem avatar>
             <Left>
               <Thumbnail source={{
