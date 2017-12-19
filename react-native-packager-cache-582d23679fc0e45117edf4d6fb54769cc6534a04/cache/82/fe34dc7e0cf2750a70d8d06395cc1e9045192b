@@ -30,6 +30,8 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 var _Cabecera = require('./Cabecera');
 
+var _reactNativeRouterFlux = require('react-native-router-flux');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -81,12 +83,12 @@ var Orden = _wrapComponent('Orden')(function (_Component) {
         _nativeBase.Container,
         { style: styles.back, __source: {
             fileName: _jsxFileName,
-            lineNumber: 18
+            lineNumber: 19
           }
         },
         _react3.default.createElement(_Cabecera.Cabecera, { headerText: "LISTA DE ORDENES", __source: {
             fileName: _jsxFileName,
-            lineNumber: 19
+            lineNumber: 20
           }
         }),
         _react3.default.createElement(
@@ -94,34 +96,36 @@ var Orden = _wrapComponent('Orden')(function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 20
+              lineNumber: 21
             }
           },
           _react3.default.createElement(_reactNative.StatusBar, { backgroundColor: 'orange', barStyle: 'light-content', __source: {
               fileName: _jsxFileName,
-              lineNumber: 21
+              lineNumber: 22
             }
           }),
           lista.map(function (lista, index) {
             return _react3.default.createElement(
               _nativeBase.ListItem,
-              { key: index, __source: {
+              { key: index, onPress: function onPress() {
+                  return _reactNativeRouterFlux.Actions.Detalle({ lista: lista });
+                }, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 25
+                  lineNumber: 26
                 }
               },
               _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                   uri: "http://cerveceriaallende.mx/wp-content/uploads/2015/05/logo.png"
                 }, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 26
+                  lineNumber: 27
                 }
               }),
               _react3.default.createElement(
                 _nativeBase.Body,
                 { style: { paddingLeft: 10 }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 29
+                    lineNumber: 30
                   }
                 },
                 _react3.default.createElement(
@@ -129,7 +133,7 @@ var Orden = _wrapComponent('Orden')(function (_Component) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 30
+                      lineNumber: 31
                     }
                   },
                   'Cliente: ',
@@ -139,7 +143,7 @@ var Orden = _wrapComponent('Orden')(function (_Component) {
                   _reactNative.Text,
                   { note: 'note', __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 31
+                      lineNumber: 32
                     }
                   },
                   'Total: ',

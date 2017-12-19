@@ -4,28 +4,24 @@ import {Thumbnail, Body, ListItem, Button, Icon} from 'native-base';
 
 export const ListaCompra = ({item, addAmount, substractAmount, deleteItem}) => {
     return (
-        <ListItem>
-            <Body>
+        <ListItem style={{flexDirection:'row', justifyContent:'space-around', alignItems:'center'}}>
             <Thumbnail square size={80} source={{uri: item.product.image}}/>
-            </Body>
-            <Body>
             <Text>{item.product.name}</Text>
-            </Body>
-            <Body style={styles.botones}>
+
             <Button light onPress={()=>substractAmount(item)} style={styles.boton}>
-                <Text>-</Text>
+                <Text style={{padding:10}}>-</Text>
             </Button>
-            <Text style={styles.text}>{item.amount}</Text>
+            <Text>{item.amount}</Text>
             <Button light onPress={()=>{addAmount(item)}} style={styles.boton}>
-                <Text>+</Text>
+                <Text style={{padding:10}}>+</Text>
             </Button>
-            </Body>
-            <Body style={styles.botones}>
-            <Text style={styles.text}>$ {item.product.price}</Text>
+
+
+            <Text >$ {item.product.price}</Text>
             <Button light onPress={()=>{deleteItem(item)}} style={styles.boton}>
-                <Icon name="trash"/>
+                <Icon name="trash" style={{color:'black'}}/>
             </Button>
-            </Body>
+
         </ListItem>
     );
 }

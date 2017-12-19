@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {listaFetch} from '../../actions/Lista';
 import _ from 'lodash';
 import {Cabecera} from './Cabecera';
+import {Actions} from 'react-native-router-flux';
 
 class Orden extends Component {
   componentWillMount() {
@@ -22,7 +23,7 @@ class Orden extends Component {
           {
             lista.map((lista, index) => {
               return (
-                <ListItem key={index}>
+                <ListItem key={index} onPress={()=> Actions.Detalle({lista:lista})}>
                   <Thumbnail square size={80} source={{
                       uri: "http://cerveceriaallende.mx/wp-content/uploads/2015/05/logo.png"
                     }}/>

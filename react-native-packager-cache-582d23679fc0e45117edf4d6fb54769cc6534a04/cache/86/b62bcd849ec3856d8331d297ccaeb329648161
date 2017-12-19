@@ -1,0 +1,177 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Detalle = undefined;
+var _jsxFileName = '/home/jose/Escritorio/CERVECERIIIIA/CerveceriaAllende/src/components/principal/Detalle.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var _nativeBase = require('native-base');
+
+var _Cabecera = require('../orden/Cabecera');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Detalle = exports.Detalle = function Detalle(_ref) {
+    var lista = _ref.lista;
+
+    var products = lista.products;
+
+    return _react2.default.createElement(
+        _reactNative.View,
+        { style: styles.view, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 10
+            }
+        },
+        _react2.default.createElement(_Cabecera.Cabecera, { headerText: "DETALLE", __source: {
+                fileName: _jsxFileName,
+                lineNumber: 11
+            }
+        }),
+        _react2.default.createElement(_reactNative.StatusBar, { backgroundColor: 'orange', barStyle: 'light-content', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 12
+            }
+        }),
+        _react2.default.createElement(
+            _nativeBase.Content,
+            { style: { backgroundColor: 'white' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 13
+                }
+            },
+            _react2.default.createElement(
+                _nativeBase.ListItem,
+                { style: { flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 14
+                    }
+                },
+                _react2.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                        uri: "http://cerveceriaallende.mx/wp-content/uploads/2015/05/logo.png"
+                    }, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 15
+                    }
+                }),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 18
+                        }
+                    },
+                    'Cliente: ',
+                    lista.cliente
+                )
+            ),
+            products.map(function (products, index) {
+                return _react2.default.createElement(
+                    _nativeBase.ListItem,
+                    { key: index, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 24
+                        }
+                    },
+                    _react2.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
+                            uri: products.product.image
+                        }, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 25
+                        }
+                    }),
+                    _react2.default.createElement(
+                        _nativeBase.Body,
+                        { style: { paddingLeft: 10 }, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 28
+                            }
+                        },
+                        _react2.default.createElement(
+                            _reactNative.Text,
+                            {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 29
+                                }
+                            },
+                            'Nombre: ',
+                            products.product.name
+                        ),
+                        _react2.default.createElement(
+                            _reactNative.Text,
+                            { note: 'note', __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 30
+                                }
+                            },
+                            'Presentaci\xF3n: ',
+                            products.product.presentation
+                        ),
+                        _react2.default.createElement(
+                            _reactNative.Text,
+                            { note: 'note', __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 31
+                                }
+                            },
+                            'Precio Unitario: ',
+                            products.product.price
+                        ),
+                        _react2.default.createElement(
+                            _reactNative.Text,
+                            { note: 'note', __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 32
+                                }
+                            },
+                            'Cantidad: ',
+                            products.amount
+                        )
+                    )
+                );
+            })
+        ),
+        _react2.default.createElement(
+            _nativeBase.Button,
+            { block: true, style: styles.boton, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 39
+                }
+            },
+            _react2.default.createElement(
+                _reactNative.Text,
+                { style: styles.text, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 40
+                    }
+                },
+                'TOTAL: ',
+                lista.total
+            )
+        )
+    );
+};
+
+var styles = _reactNative.StyleSheet.create({
+    view: {
+        flex: 1
+    },
+    text: {
+        color: "orange",
+        fontWeight: 'bold',
+        fontSize: 20
+    },
+    boton: {
+        backgroundColor: 'white',
+        width: '100%',
+        borderColor: "orange",
+        borderWidth: 2
+    }
+});

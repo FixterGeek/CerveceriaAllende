@@ -9,6 +9,7 @@ import ProductosList from './components/principal/ProductosList';
 import Orden from './components/orden/Orden';
 import Inventario from './components/principal/Inventario';
 import Carrito from "./components/principal/Carrito";
+import {Detalle} from './components/principal/Detalle';
 
 const Routes = () => {
   return (
@@ -23,6 +24,7 @@ const Routes = () => {
         <Scene key="Orden" header={null} component={Orden}/>
         <Scene key="Inventario" header={null} component={Inventario}/>
         <Scene key="Carrito" header={null} component={Carrito}/>
+        <Scene key="Detalle" header={null} component={Detalle}/>
       </Scene>
     </Router>
   </Root>

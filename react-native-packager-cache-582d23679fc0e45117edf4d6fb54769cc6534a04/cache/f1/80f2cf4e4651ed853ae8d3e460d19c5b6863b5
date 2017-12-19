@@ -306,7 +306,7 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var styles = _reactNative.StyleSheet.create({
     text: {
-        color: "#0097A7",
+        color: "orange",
         fontWeight: 'bold',
         fontSize: 20
     },
@@ -325,7 +325,7 @@ var styles = _reactNative.StyleSheet.create({
     boton: {
         backgroundColor: 'white',
         width: '100%',
-        borderColor: "#0097A7",
+        borderColor: "orange",
         borderWidth: 2
     },
     list: {

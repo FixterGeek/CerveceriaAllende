@@ -111,7 +111,7 @@ var Registro = _wrapComponent('Registro')(function (_Component) {
       if (verifyCorreo == correo) {
         return _react3.default.createElement(
           _nativeBase.Item,
-          { success: 'success', style: styles.inputRounded, __source: {
+          { style: styles.inputRounded, __source: {
               fileName: _jsxFileName,
               lineNumber: 46
             }
@@ -141,7 +141,7 @@ var Registro = _wrapComponent('Registro')(function (_Component) {
 
       return _react3.default.createElement(
         _nativeBase.Item,
-        { error: 'error', style: styles.inputRounded, __source: {
+        { style: styles.inputRounded, __source: {
             fileName: _jsxFileName,
             lineNumber: 62
           }

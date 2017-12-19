@@ -136,7 +136,7 @@ const mapStateToProps = state => {
 
 const styles = StyleSheet.create({
     text: {
-        color: "#0097A7",
+        color: "orange",
         fontWeight: 'bold',
         fontSize: 20
     },
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     boton: {
         backgroundColor: 'white',
         width: '100%',
-        borderColor: "#0097A7",
+        borderColor: "orange",
         borderWidth: 2
     },
     list: {
