@@ -111,7 +111,7 @@ var Orden = _wrapComponent('Orden')(function (_Component) {
                 }
               },
               _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
-                  uri: lista.image
+                  uri: "http://cerveceriaallende.mx/wp-content/uploads/2015/05/logo.png"
                 }, __source: {
                   fileName: _jsxFileName,
                   lineNumber: 26
@@ -119,8 +119,7 @@ var Orden = _wrapComponent('Orden')(function (_Component) {
               }),
               _react3.default.createElement(
                 _nativeBase.Body,
-                {
-                  __source: {
+                { style: { paddingLeft: 10 }, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 29
                   }
@@ -133,7 +132,8 @@ var Orden = _wrapComponent('Orden')(function (_Component) {
                       lineNumber: 30
                     }
                   },
-                  lista.descripcion
+                  'Cliente: ',
+                  lista.cliente
                 ),
                 _react3.default.createElement(
                   _reactNative.Text,
@@ -142,7 +142,8 @@ var Orden = _wrapComponent('Orden')(function (_Component) {
                       lineNumber: 31
                     }
                   },
-                  lista.producto
+                  'Total: ',
+                  lista.total
                 )
               )
             );

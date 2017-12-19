@@ -13,7 +13,7 @@ class Principal extends Component {
         <Encabezado/>
         <StatusBar backgroundColor="orange" barStyle="light-content"/>
         <Card style={styles.card}>
-          <TouchableOpacity onPress={() => Actions.Inventario()}>
+          <TouchableOpacity onPress={() => Actions.ProductosList()}>
           <ImageBackground source={require('../../assets/imgs/image.jpg')} style={styles.img}>
             <View style={styles.view}>
               <Text style={styles.text}>Ordenar</Text>

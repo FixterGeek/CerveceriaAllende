@@ -98,7 +98,7 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
           _react3.default.createElement(
             _reactNative.TouchableOpacity,
             { onPress: function onPress() {
-                return _reactNativeRouterFlux.Actions.Inventario();
+                return _reactNativeRouterFlux.Actions.ProductosList();
               }, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 16

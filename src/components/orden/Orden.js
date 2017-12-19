@@ -24,11 +24,11 @@ class Orden extends Component {
               return (
                 <ListItem key={index}>
                   <Thumbnail square size={80} source={{
-                      uri: lista.image
+                      uri: "http://cerveceriaallende.mx/wp-content/uploads/2015/05/logo.png"
                     }}/>
-                  <Body>
-                    <Text>{lista.descripcion}</Text>
-                    <Text note="note">{lista.producto}</Text>
+                  <Body style={{paddingLeft:10}}>
+                    <Text>Cliente: {lista.cliente}</Text>
+                    <Text note="note">Total: {lista.total}</Text>
                   </Body>
                 </ListItem>
               )

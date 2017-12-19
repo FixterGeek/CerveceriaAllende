@@ -3,7 +3,7 @@ import {StyleSheet, TouchableOpacity, Text, View} from 'react-native';
 import {Header, Left, Icon, Body, Right} from 'native-base';
 import {Actions} from 'react-native-router-flux';
 
-const Cabecera = ({headerText}) => {
+const Cabecera = ({headerText, onPress, icon}) => {
     return (
       <Header style={styles.header}>
           <TouchableOpacity onPress={() => Actions.pop()}>
@@ -13,7 +13,9 @@ const Cabecera = ({headerText}) => {
           <Text style={styles.text}>{headerText}</Text>
           </View>
 
-          <View />
+          <TouchableOpacity onPress={onPress}>
+              <Icon name={icon} style={styles.color}/>
+          </TouchableOpacity>
       </Header>
     );
   };

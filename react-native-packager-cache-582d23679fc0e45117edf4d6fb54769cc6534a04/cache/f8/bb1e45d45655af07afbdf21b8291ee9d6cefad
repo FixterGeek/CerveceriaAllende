@@ -12,11 +12,21 @@ var _Lista = require('./Lista');
 
 var _Lista2 = _interopRequireDefault(_Lista);
 
+var _productsReducer = require('./productsReducer');
+
+var _productsReducer2 = _interopRequireDefault(_productsReducer);
+
+var _orderReducer = require('./orderReducer');
+
+var _orderReducer2 = _interopRequireDefault(_orderReducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootReducer = (0, _redux.combineReducers)({
     pedidoForm: _PedidoReducer2.default,
-    lista: _Lista2.default
+    lista: _Lista2.default,
+    product: _productsReducer2.default,
+    cart: _orderReducer2.default
 });
 
 exports.default = rootReducer;

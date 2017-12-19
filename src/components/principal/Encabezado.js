@@ -8,7 +8,7 @@ const Encabezado = (props) => {
     <Header style={styles.header}>
       <Left>
         <Image style={styles.img} source={{
-            uri: 'http://cerveceriaallende.mx/wp-content/uploads/2015/04/logo.png'
+            uri: 'http://cerveceriaallende.mx/wp-content/uploads/2015/05/logo.png'
           }}/>
       </Left>
       <Body>

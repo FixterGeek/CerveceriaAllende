@@ -17,7 +17,9 @@ var _reactNativeRouterFlux = require('react-native-router-flux');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Cabecera = function Cabecera(_ref) {
-  var headerText = _ref.headerText;
+  var headerText = _ref.headerText,
+      onPress = _ref.onPress,
+      icon = _ref.icon;
 
   return _react2.default.createElement(
     _nativeBase.Header,
@@ -59,12 +61,19 @@ var Cabecera = function Cabecera(_ref) {
         headerText
       )
     ),
-    _react2.default.createElement(_reactNative.View, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      }
-    })
+    _react2.default.createElement(
+      _reactNative.TouchableOpacity,
+      { onPress: onPress, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        }
+      },
+      _react2.default.createElement(_nativeBase.Icon, { name: icon, style: styles.color, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        }
+      })
+    )
   );
 };
 exports.Cabecera = Cabecera;

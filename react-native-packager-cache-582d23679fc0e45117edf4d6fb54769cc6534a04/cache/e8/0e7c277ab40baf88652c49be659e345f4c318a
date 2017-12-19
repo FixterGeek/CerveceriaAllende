@@ -4,3 +4,5 @@ Object.defineProperty(exports, "__esModule", {
 var PEDIDO_UPDATE = exports.PEDIDO_UPDATE = 'pedido_update';
 var PEDIDO_CREATE = exports.PEDIDO_CREATE = 'pedido_create';
 var LISTA_FETCH_SUCCESS = exports.LISTA_FETCH_SUCCESS = 'lista_fetch_success';
+
+var PRODUCT_FETCH_SUCCESS = exports.PRODUCT_FETCH_SUCCESS = 'product_fetch_success';

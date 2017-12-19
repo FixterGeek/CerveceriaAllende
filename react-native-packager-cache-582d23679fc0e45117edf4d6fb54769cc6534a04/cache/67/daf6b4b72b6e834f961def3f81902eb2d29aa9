@@ -1,0 +1,105 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ProductItem = undefined;
+var _jsxFileName = '/home/jose/Escritorio/CERVECERIIIIA/CerveceriaAllende/src/components/principal/ProductItem.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var _nativeBase = require('native-base');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ProductItem = exports.ProductItem = function ProductItem(_ref) {
+    var image = _ref.image,
+        name = _ref.name,
+        price = _ref.price,
+        presentation = _ref.presentation,
+        addToCart = _ref.addToCart,
+        item = _ref.item;
+
+    console.log(item);
+    return _react2.default.createElement(
+        _reactNative.TouchableOpacity,
+        { onPress: function onPress() {
+                return _reactNative.Alert.alert('ORDEN', '\xBFDeseas agregar ' + name + ' ' + presentation + ' a la orden?', [{
+                    text: 'Ok',
+                    onPress: function onPress() {
+                        return addToCart(item);
+                    }
+                }, {
+                    text: 'Cancelar',
+                    onPress: function onPress() {
+                        return console.log('Cancel Pressed');
+                    },
+                    style: 'cancel'
+                }], { cancelable: false });
+            }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 8
+            }
+        },
+        _react2.default.createElement(
+            _nativeBase.Card,
+            { style: { width: 160 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 18
+                }
+            },
+            _react2.default.createElement(
+                _nativeBase.CardItem,
+                { cardBody: true, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 19
+                    }
+                },
+                _react2.default.createElement(_reactNative.Image, { source: { uri: image }, style: { height: 130, width: null, flex: 1 }, resizeMode: 'contain', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 20
+                    }
+                })
+            ),
+            _react2.default.createElement(
+                _nativeBase.CardItem,
+                { style: { flexDirection: 'column' }, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 22
+                    }
+                },
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    { style: { fontWeight: 'bold' }, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 23
+                        }
+                    },
+                    name
+                ),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    { note: true, style: { fontSize: 12 }, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 24
+                        }
+                    },
+                    presentation
+                ),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 25
+                        }
+                    },
+                    '$ ',
+                    price
+                )
+            )
+        )
+    );
+};

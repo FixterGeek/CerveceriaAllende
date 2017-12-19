@@ -4,8 +4,31 @@ import {CardItem, Button, Thumbnail, Content, Container, ListItem, Body, Left} f
 import {connect} from 'react-redux';
 import {pedidoUpdate, pedidoCreate} from '../../actions';
 import {Cabecera} from '../orden/Cabecera';
+import cliente from '../../assets/imgs/cliente.jpg'
+
+const clientes = [
+    {name: 'Jose', },
+    {name: 'Miguel', },
+    {name: 'Brenda', },
+    {name: 'Oswaldo', },
+    {name: 'Hector', },
+    {name: 'Sául', }
+];
 
 class PedidoCreate extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      name:'',
+        image:''
+    }
+  }
+  handleChange(image){
+    this.setState({
+        name: this.props.cliente,
+        image: image
+    })
+  }
   onButtonPress() {
     const {
       cliente,
@@ -47,8 +70,7 @@ class PedidoCreate extends Component {
           <StatusBar backgroundColor="orange" barStyle="light-content"/>
           <ListItem avatar>
             <Left>
-              <Thumbnail source={{
-                  uri: 'https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/19732346_10213092050513215_2022404890484623335_n.jpg?oh=0fd3137405d352a5f144219a877e3ddd&oe=5A96C5BD' }} />
+              <Thumbnail source={cliente} />
             </Left>
             <Body>
               <CardItem>
@@ -57,12 +79,10 @@ class PedidoCreate extends Component {
                   style={styles.picker}
                   selectedValue={this.props.cliente}
                   onValueChange={value => this.props.pedidoUpdate({prop: 'cliente', value})}>
-                  <Picker.Item label="Jose" value="Jose"/>
-                  <Picker.Item label="Saul" value="Saul"/>
-                  <Picker.Item label="Oswaldo" value="Oswaldo"/>
-                  <Picker.Item label="Hector" value="Hector"/>
-                  <Picker.Item label="Brenda" value="Brenda"/>
-                  <Picker.Item label="Miguel" value="Miguel"/>
+                    {clientes.map((p, index)=>{
+                        return <Picker.Item key={index} label={p.name} value={p.name}/>
+                    })}
+
                 </Picker>
               </CardItem>
             </Body>

@@ -24,6 +24,10 @@ var _actions = require('../../actions');
 
 var _Cabecera = require('../orden/Cabecera');
 
+var _cliente = require('../../assets/imgs/cliente.jpg');
+
+var _cliente2 = _interopRequireDefault(_cliente);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51,16 +55,32 @@ function _wrapComponent(id) {
   };
 }
 
+var clientes = [{ name: 'Jose' }, { name: 'Miguel' }, { name: 'Brenda' }, { name: 'Oswaldo' }, { name: 'Hector' }, { name: 'Sául' }];
+
 var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
   _inherits(PedidoCreate, _Component);
 
-  function PedidoCreate() {
+  function PedidoCreate(props) {
     _classCallCheck(this, PedidoCreate);
 
-    return _possibleConstructorReturn(this, (PedidoCreate.__proto__ || Object.getPrototypeOf(PedidoCreate)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (PedidoCreate.__proto__ || Object.getPrototypeOf(PedidoCreate)).call(this, props));
+
+    _this.state = {
+      name: '',
+      image: ''
+    };
+    return _this;
   }
 
   _createClass(PedidoCreate, [{
+    key: 'handleChange',
+    value: function handleChange(image) {
+      this.setState({
+        name: this.props.cliente,
+        image: image
+      });
+    }
+  }, {
     key: 'onButtonPress',
     value: function onButtonPress() {
       var _props = this.props,
@@ -104,12 +124,12 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
         _nativeBase.Container,
         { style: styles.back, __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 67
           }
         },
         _react3.default.createElement(_Cabecera.Cabecera, { headerText: "ARMA TU PEDIDO", __source: {
             fileName: _jsxFileName,
-            lineNumber: 45
+            lineNumber: 68
           }
         }),
         _react3.default.createElement(
@@ -117,19 +137,19 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 46
+              lineNumber: 69
             }
           },
           _react3.default.createElement(_reactNative.StatusBar, { backgroundColor: 'orange', barStyle: 'light-content', __source: {
               fileName: _jsxFileName,
-              lineNumber: 47
+              lineNumber: 70
             }
           }),
           _react3.default.createElement(
             _nativeBase.ListItem,
             { avatar: true, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 48
+                lineNumber: 71
               }
             },
             _react3.default.createElement(
@@ -137,13 +157,12 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 49
+                  lineNumber: 72
                 }
               },
-              _react3.default.createElement(_nativeBase.Thumbnail, { source: {
-                  uri: 'https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/19732346_10213092050513215_2022404890484623335_n.jpg?oh=0fd3137405d352a5f144219a877e3ddd&oe=5A96C5BD' }, __source: {
+              _react3.default.createElement(_nativeBase.Thumbnail, { source: _cliente2.default, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 50
+                  lineNumber: 73
                 }
               })
             ),
@@ -152,7 +171,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 53
+                  lineNumber: 75
                 }
               },
               _react3.default.createElement(
@@ -160,7 +179,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 54
+                    lineNumber: 76
                   }
                 },
                 _react3.default.createElement(
@@ -168,7 +187,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 55
+                      lineNumber: 77
                     }
                   },
                   'Cliente'
@@ -182,38 +201,15 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                       return _this2.props.pedidoUpdate({ prop: 'cliente', value: value });
                     }, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 56
+                      lineNumber: 78
                     }
                   },
-                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Jose', value: 'Jose', __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 60
-                    }
-                  }),
-                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Saul', value: 'Saul', __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 61
-                    }
-                  }),
-                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Oswaldo', value: 'Oswaldo', __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 62
-                    }
-                  }),
-                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Hector', value: 'Hector', __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 63
-                    }
-                  }),
-                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Brenda', value: 'Brenda', __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 64
-                    }
-                  }),
-                  _react3.default.createElement(_reactNative.Picker.Item, { label: 'Miguel', value: 'Miguel', __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 65
-                    }
+                  clientes.map(function (p, index) {
+                    return _react3.default.createElement(_reactNative.Picker.Item, { key: index, label: p.name, value: p.name, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 83
+                      }
+                    });
                   })
                 )
               )
@@ -223,7 +219,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             _nativeBase.ListItem,
             { itemDivider: true, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 71
+                lineNumber: 91
               }
             },
             _react3.default.createElement(
@@ -231,7 +227,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 72
+                  lineNumber: 92
                 }
               },
               'ARTESANAL ROJA'
@@ -242,21 +238,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 75
+                lineNumber: 95
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 76
+                lineNumber: 96
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 80
+                  lineNumber: 100
                 }
               },
               _react3.default.createElement(
@@ -264,7 +260,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 81
+                    lineNumber: 101
                   }
                 },
                 'Pieza'
@@ -275,7 +271,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 84
+                  lineNumber: 104
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -287,7 +283,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 85
+                  lineNumber: 105
                 }
               })
             )
@@ -297,21 +293,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 94
+                lineNumber: 114
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_656297_246443_20150615143234_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 95
+                lineNumber: 115
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 99
+                  lineNumber: 119
                 }
               },
               _react3.default.createElement(
@@ -319,7 +315,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 100
+                    lineNumber: 120
                   }
                 },
                 'Six'
@@ -330,7 +326,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 103
+                  lineNumber: 123
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -342,7 +338,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 104
+                  lineNumber: 124
                 }
               })
             )
@@ -352,21 +348,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 113
+                lineNumber: 133
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_678439_246443_20150703132445_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 114
+                lineNumber: 134
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 118
+                  lineNumber: 138
                 }
               },
               _react3.default.createElement(
@@ -374,7 +370,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 119
+                    lineNumber: 139
                   }
                 },
                 'Caja'
@@ -385,7 +381,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 122
+                  lineNumber: 142
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -397,7 +393,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 123
+                  lineNumber: 143
                 }
               })
             )
@@ -406,7 +402,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             _nativeBase.ListItem,
             { itemDivider: true, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 132
+                lineNumber: 152
               }
             },
             _react3.default.createElement(
@@ -414,7 +410,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 133
+                  lineNumber: 153
                 }
               },
               'ARTESANAL AMARILLA'
@@ -425,21 +421,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 136
+                lineNumber: 156
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 137
+                lineNumber: 157
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 141
+                  lineNumber: 161
                 }
               },
               _react3.default.createElement(
@@ -447,7 +443,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 142
+                    lineNumber: 162
                   }
                 },
                 'Pieza'
@@ -458,7 +454,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 145
+                  lineNumber: 165
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -470,7 +466,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 146
+                  lineNumber: 166
                 }
               })
             )
@@ -480,21 +476,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 155
+                lineNumber: 175
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_656297_246443_20150615143234_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 156
+                lineNumber: 176
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 160
+                  lineNumber: 180
                 }
               },
               _react3.default.createElement(
@@ -502,7 +498,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 161
+                    lineNumber: 181
                   }
                 },
                 'Six'
@@ -513,7 +509,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 164
+                  lineNumber: 184
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -525,7 +521,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 165
+                  lineNumber: 185
                 }
               })
             )
@@ -535,21 +531,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 174
+                lineNumber: 194
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_678439_246443_20150703132445_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 175
+                lineNumber: 195
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 179
+                  lineNumber: 199
                 }
               },
               _react3.default.createElement(
@@ -557,7 +553,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 180
+                    lineNumber: 200
                   }
                 },
                 'Caja'
@@ -568,7 +564,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 183
+                  lineNumber: 203
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -580,7 +576,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 184
+                  lineNumber: 204
                 }
               })
             )
@@ -589,7 +585,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             _nativeBase.ListItem,
             { itemDivider: true, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 193
+                lineNumber: 213
               }
             },
             _react3.default.createElement(
@@ -597,7 +593,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 194
+                  lineNumber: 214
                 }
               },
               'ARTESANAL NARANJA'
@@ -608,21 +604,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 197
+                lineNumber: 217
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 198
+                lineNumber: 218
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 202
+                  lineNumber: 222
                 }
               },
               _react3.default.createElement(
@@ -630,7 +626,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 203
+                    lineNumber: 223
                   }
                 },
                 'Pieza'
@@ -641,7 +637,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 206
+                  lineNumber: 226
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -653,7 +649,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 207
+                  lineNumber: 227
                 }
               })
             )
@@ -663,21 +659,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 216
+                lineNumber: 236
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_656297_246443_20150615143234_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 217
+                lineNumber: 237
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 221
+                  lineNumber: 241
                 }
               },
               _react3.default.createElement(
@@ -685,7 +681,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 222
+                    lineNumber: 242
                   }
                 },
                 'Six'
@@ -696,7 +692,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 225
+                  lineNumber: 245
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -708,7 +704,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 226
+                  lineNumber: 246
                 }
               })
             )
@@ -718,21 +714,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 235
+                lineNumber: 255
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_678439_246443_20150703132445_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 236
+                lineNumber: 256
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 240
+                  lineNumber: 260
                 }
               },
               _react3.default.createElement(
@@ -740,7 +736,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 241
+                    lineNumber: 261
                   }
                 },
                 'Caja'
@@ -751,7 +747,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 244
+                  lineNumber: 264
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -763,7 +759,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 245
+                  lineNumber: 265
                 }
               })
             )
@@ -772,7 +768,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             _nativeBase.ListItem,
             { itemDivider: true, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 254
+                lineNumber: 274
               }
             },
             _react3.default.createElement(
@@ -780,7 +776,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 255
+                  lineNumber: 275
                 }
               },
               'ARTESANAL VERDE'
@@ -791,21 +787,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 258
+                lineNumber: 278
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_656278_246443_20150615141713_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 259
+                lineNumber: 279
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 263
+                  lineNumber: 283
                 }
               },
               _react3.default.createElement(
@@ -813,7 +809,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 264
+                    lineNumber: 284
                   }
                 },
                 'Pieza'
@@ -824,7 +820,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 267
+                  lineNumber: 287
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -836,7 +832,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 268
+                  lineNumber: 288
                 }
               })
             )
@@ -846,21 +842,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 277
+                lineNumber: 297
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_656297_246443_20150615143234_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 278
+                lineNumber: 298
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 282
+                  lineNumber: 302
                 }
               },
               _react3.default.createElement(
@@ -868,7 +864,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 283
+                    lineNumber: 303
                   }
                 },
                 'Six'
@@ -879,7 +875,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 286
+                  lineNumber: 306
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -891,7 +887,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 287
+                  lineNumber: 307
                 }
               })
             )
@@ -901,21 +897,21 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 296
+                lineNumber: 316
               }
             },
             _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                 uri: 'https://s3.amazonaws.com/kichink/items_678439_246443_20150703132445_b.jpg'
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 297
+                lineNumber: 317
               }
             }),
             _react3.default.createElement(
               _nativeBase.Body,
               { style: styles.margin, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 301
+                  lineNumber: 321
                 }
               },
               _react3.default.createElement(
@@ -923,7 +919,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 302
+                    lineNumber: 322
                   }
                 },
                 'Caja'
@@ -934,7 +930,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 305
+                  lineNumber: 325
                 }
               },
               _react3.default.createElement(_reactNative.TextInput, {
@@ -946,7 +942,7 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
                 keyboardType: 'numeric',
                 style: styles.input, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 306
+                  lineNumber: 326
                 }
               })
             )
@@ -956,14 +952,14 @@ var PedidoCreate = _wrapComponent('PedidoCreate')(function (_Component) {
           _nativeBase.Button,
           { block: true, onPress: this.onButtonPress.bind(this), style: styles.color, __source: {
               fileName: _jsxFileName,
-              lineNumber: 316
+              lineNumber: 336
             }
           },
           _react3.default.createElement(
             _reactNative.Text,
             { style: styles.text, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 317
+                lineNumber: 337
               }
             },
             'PEDIR'
