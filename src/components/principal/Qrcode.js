@@ -18,6 +18,7 @@ export default class Camara extends Component {
     return (
       <View style={styles.container}>
         <Cabecera headerText={"LECTOR"} onPress={()=>Actions.pop()} />
+          <StatusBar backgroundColor="orange" barStyle="light-content"/>
         <Camera
           ref={(cam) => {
             this.camera = cam;
@@ -51,5 +52,5 @@ const styles = StyleSheet.create({
     height:200,
     width:200,
   },
-  
+
 });
