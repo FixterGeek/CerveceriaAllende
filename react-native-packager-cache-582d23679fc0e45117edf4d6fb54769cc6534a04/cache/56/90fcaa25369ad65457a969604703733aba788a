@@ -119,7 +119,7 @@ var ProductosList = _wrapComponent('ProductosList')(function (_Component) {
                 },
                 _react3.default.createElement(_Cabecera.Cabecera, { headerText: "Lista de productos", onPress: function onPress() {
                         return _reactNativeRouterFlux.Actions.Carrito();
-                    }, icon: "ios-document", __source: {
+                    }, icon: "ios-cart", __source: {
                         fileName: _jsxFileName,
                         lineNumber: 31
                     }

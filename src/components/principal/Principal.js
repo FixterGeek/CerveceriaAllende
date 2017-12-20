@@ -14,9 +14,9 @@ class Principal extends Component {
         <StatusBar backgroundColor="orange" barStyle="light-content"/>
         <Card style={styles.card}>
           <TouchableOpacity onPress={() => Actions.ProductosList()}>
-          <ImageBackground source={require('../../assets/imgs/image.jpg')} style={styles.img}>
-            <View style={styles.view}>
-              <Text style={styles.text}>Ordenar</Text>
+          <ImageBackground source={{uri: "http://cerveceriaallende.mx/wp-content/uploads/2016/04/4-copia.jpg"}} style={styles.img}>
+            <View style={styles.view4}>
+              <Text style={styles.text}>ORDENAR</Text>
             </View>
           </ImageBackground>
           </TouchableOpacity>
@@ -24,11 +24,21 @@ class Principal extends Component {
 
         <Card style={styles.card}>
           <TouchableOpacity onPress={() => Actions.Orden()}>
-          <ImageBackground source={require('../../assets/imgs/image1.jpg')} style={styles.img}>
-            <View style={styles.view}>
-              <Text style={styles.text}>Ver Ordenes</Text>
+          <ImageBackground source={{uri: "http://cerveceriaallende.mx/wp-content/uploads/2016/04/5-copia.jpg"}} style={styles.img}>
+            <View style={styles.view4}>
+              <Text style={styles.text}>VER ORDENES</Text>
             </View>
           </ImageBackground>
+          </TouchableOpacity>
+        </Card>
+
+        <Card style={styles.card}>
+          <TouchableOpacity onPress={() => Actions.Qrcode()}>
+            <ImageBackground source={{uri: "http://conceptodefinicion.de/wp-content/uploads/2017/03/Inventario.jpg"}} style={styles.img}>
+              <View style={styles.view4}>
+                <Text style={styles.text}>AÑADIR A INVENTARIO</Text>
+              </View>
+            </ImageBackground>
           </TouchableOpacity>
         </Card>
       </Container>
@@ -46,16 +56,24 @@ const styles = StyleSheet.create({
   },
   img: {
     height: '100%',
-    width: '100%'
+    width: '100%',
+      justifyContent:'center',
   },
   text: {
-    fontSize: 40,
+    fontSize: 20,
     color: 'white',
-    marginTop: 80
+      backgroundColor:'transparent'
   },
   view: {
     alignSelf: 'center',
-  }
+  },
+    view4: {
+        backgroundColor: 'rgba(0,0,0,.6)',
+        height: '100%',
+        width: '100%',
+        justifyContent: 'center',
+        alignItems:'center'
+    },
 });
 
 

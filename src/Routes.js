@@ -10,6 +10,7 @@ import Orden from './components/orden/Orden';
 import Inventario from './components/principal/Inventario';
 import Carrito from "./components/principal/Carrito";
 import {Detalle} from './components/principal/Detalle';
+import Qrcode from './components/principal/Qrcode';
 
 const Routes = () => {
   return (
@@ -25,6 +26,7 @@ const Routes = () => {
         <Scene key="Inventario" header={null} component={Inventario}/>
         <Scene key="Carrito" header={null} component={Carrito}/>
         <Scene key="Detalle" header={null} component={Detalle}/>
+        <Scene key="Qrcode" header={null} component={Qrcode}/>
       </Scene>
     </Router>
   </Root>

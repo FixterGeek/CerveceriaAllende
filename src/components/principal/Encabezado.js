@@ -8,13 +8,12 @@ const Encabezado = (props) => {
     <Header style={styles.header}>
       <Left>
         <Image style={styles.img} source={{
-            uri: 'http://cerveceriaallende.mx/wp-content/uploads/2015/05/logo.png'
+            uri: 'https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/10391811_455385081337078_892413498725531531_n.jpg?oh=bfbfda6b61cfd334ff68c03e81d0c6fb&oe=5AD33F08'
           }}/>
       </Left>
       <Body>
-        <Text>Cerveceria Allende</Text>
+        <Text>CERVECERIA ALLENDE</Text>
       </Body>
-      <Right/>
     </Header>
   );
 };

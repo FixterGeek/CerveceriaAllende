@@ -106,14 +106,14 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
             },
             _react3.default.createElement(
               _reactNative.ImageBackground,
-              { source: require('../../assets/imgs/image.jpg'), style: styles.img, __source: {
+              { source: { uri: "http://cerveceriaallende.mx/wp-content/uploads/2016/04/4-copia.jpg" }, style: styles.img, __source: {
                   fileName: _jsxFileName,
                   lineNumber: 17
                 }
               },
               _react3.default.createElement(
                 _reactNative.View,
-                { style: styles.view, __source: {
+                { style: styles.view4, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 18
                   }
@@ -125,7 +125,7 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
                       lineNumber: 19
                     }
                   },
-                  'Ordenar'
+                  'ORDENAR'
                 )
               )
             )
@@ -149,14 +149,14 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
             },
             _react3.default.createElement(
               _reactNative.ImageBackground,
-              { source: require('../../assets/imgs/image1.jpg'), style: styles.img, __source: {
+              { source: { uri: "http://cerveceriaallende.mx/wp-content/uploads/2016/04/5-copia.jpg" }, style: styles.img, __source: {
                   fileName: _jsxFileName,
                   lineNumber: 27
                 }
               },
               _react3.default.createElement(
                 _reactNative.View,
-                { style: styles.view, __source: {
+                { style: styles.view4, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 28
                   }
@@ -168,7 +168,50 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
                       lineNumber: 29
                     }
                   },
-                  'Ver Ordenes'
+                  'VER ORDENES'
+                )
+              )
+            )
+          )
+        ),
+        _react3.default.createElement(
+          _nativeBase.Card,
+          { style: styles.card, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 35
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.TouchableOpacity,
+            { onPress: function onPress() {
+                return _reactNativeRouterFlux.Actions.Qrcode();
+              }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 36
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.ImageBackground,
+              { source: { uri: "http://conceptodefinicion.de/wp-content/uploads/2017/03/Inventario.jpg" }, style: styles.img, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 37
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                { style: styles.view4, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 38
+                  }
+                },
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  { style: styles.text, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 39
+                    }
+                  },
+                  'A\xD1ADIR A INVENTARIO'
                 )
               )
             )
@@ -195,15 +238,23 @@ var styles = _reactNative.StyleSheet.create({
   },
   img: {
     height: '100%',
-    width: '100%'
+    width: '100%',
+    justifyContent: 'center'
   },
   text: {
-    fontSize: 40,
+    fontSize: 20,
     color: 'white',
-    marginTop: 80
+    backgroundColor: 'transparent'
   },
   view: {
     alignSelf: 'center'
+  },
+  view4: {
+    backgroundColor: 'rgba(0,0,0,.6)',
+    height: '100%',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 

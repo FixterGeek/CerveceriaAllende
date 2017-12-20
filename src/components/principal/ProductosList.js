@@ -28,7 +28,7 @@ class ProductosList extends Component {
         return(
 
             <Content>
-                <Cabecera headerText={"Lista de productos"} onPress={()=>Actions.Carrito()} icon={"ios-document"} />
+                <Cabecera headerText={"Lista de productos"} onPress={()=>Actions.Carrito()} icon={"ios-cart"} />
                 <StatusBar backgroundColor="orange" barStyle="light-content"/>
                 {this.fetched()}
                 <View style={styles.viewP}>
