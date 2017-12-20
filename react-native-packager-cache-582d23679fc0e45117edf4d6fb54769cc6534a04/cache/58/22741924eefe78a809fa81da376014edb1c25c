@@ -30,6 +30,18 @@ var _Encabezado2 = _interopRequireDefault(_Encabezado);
 
 var _reactNativeRouterFlux = require('react-native-router-flux');
 
+var _img = require('../../assets/imgs/img1.jpg');
+
+var _img2 = _interopRequireDefault(_img);
+
+var _img3 = require('../../assets/imgs/img2.jpg');
+
+var _img4 = _interopRequireDefault(_img3);
+
+var _img5 = require('../../assets/imgs/img3.jpg');
+
+var _img6 = _interopRequireDefault(_img5);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -74,25 +86,25 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12
+            lineNumber: 15
           }
         },
         _react3.default.createElement(_Encabezado2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13
+            lineNumber: 16
           }
         }),
         _react3.default.createElement(_reactNative.StatusBar, { backgroundColor: 'orange', barStyle: 'light-content', __source: {
             fileName: _jsxFileName,
-            lineNumber: 14
+            lineNumber: 17
           }
         }),
         _react3.default.createElement(
           _nativeBase.Card,
           { style: styles.card, __source: {
               fileName: _jsxFileName,
-              lineNumber: 15
+              lineNumber: 18
             }
           },
           _react3.default.createElement(
@@ -101,28 +113,28 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
                 return _reactNativeRouterFlux.Actions.ProductosList();
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 16
+                lineNumber: 19
               }
             },
             _react3.default.createElement(
               _reactNative.ImageBackground,
-              { source: { uri: "http://cerveceriaallende.mx/wp-content/uploads/2016/04/4-copia.jpg" }, style: styles.img, __source: {
+              { source: _img2.default, style: styles.img, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 17
+                  lineNumber: 20
                 }
               },
               _react3.default.createElement(
                 _reactNative.View,
                 { style: styles.view4, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 18
+                    lineNumber: 21
                   }
                 },
                 _react3.default.createElement(
                   _reactNative.Text,
                   { style: styles.text, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 19
+                      lineNumber: 22
                     }
                   },
                   'ORDENAR'
@@ -135,7 +147,7 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
           _nativeBase.Card,
           { style: styles.card, __source: {
               fileName: _jsxFileName,
-              lineNumber: 25
+              lineNumber: 28
             }
           },
           _react3.default.createElement(
@@ -144,28 +156,28 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
                 return _reactNativeRouterFlux.Actions.Orden();
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 26
+                lineNumber: 29
               }
             },
             _react3.default.createElement(
               _reactNative.ImageBackground,
-              { source: { uri: "http://cerveceriaallende.mx/wp-content/uploads/2016/04/5-copia.jpg" }, style: styles.img, __source: {
+              { source: _img4.default, style: styles.img, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 27
+                  lineNumber: 30
                 }
               },
               _react3.default.createElement(
                 _reactNative.View,
                 { style: styles.view4, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 28
+                    lineNumber: 31
                   }
                 },
                 _react3.default.createElement(
                   _reactNative.Text,
                   { style: styles.text, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 29
+                      lineNumber: 32
                     }
                   },
                   'VER ORDENES'
@@ -178,7 +190,7 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
           _nativeBase.Card,
           { style: styles.card, __source: {
               fileName: _jsxFileName,
-              lineNumber: 35
+              lineNumber: 38
             }
           },
           _react3.default.createElement(
@@ -187,28 +199,28 @@ var Principal = _wrapComponent('Principal')(function (_Component) {
                 return _reactNativeRouterFlux.Actions.Qrcode();
               }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 36
+                lineNumber: 39
               }
             },
             _react3.default.createElement(
               _reactNative.ImageBackground,
-              { source: { uri: "http://conceptodefinicion.de/wp-content/uploads/2017/03/Inventario.jpg" }, style: styles.img, __source: {
+              { source: _img6.default, style: styles.img, __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 37
+                  lineNumber: 40
                 }
               },
               _react3.default.createElement(
                 _reactNative.View,
                 { style: styles.view4, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 38
+                    lineNumber: 41
                   }
                 },
                 _react3.default.createElement(
                   _reactNative.Text,
                   { style: styles.text, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 39
+                      lineNumber: 42
                     }
                   },
                   'A\xD1ADIR A INVENTARIO'
