@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -7,7 +6,8 @@ import {
   Text,
   TouchableHighlight,
   View,
-  Image
+  Image,
+  StatusBar
 } from 'react-native';
 import Camera from 'react-native-camera';
 import {Cabecera} from "../orden/Cabecera";
