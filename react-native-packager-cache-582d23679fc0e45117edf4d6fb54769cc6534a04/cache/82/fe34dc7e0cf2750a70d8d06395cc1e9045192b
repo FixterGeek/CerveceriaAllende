@@ -116,7 +116,7 @@ var Orden = _wrapComponent('Orden')(function (_Component) {
               },
               _react3.default.createElement(_nativeBase.Thumbnail, { square: true, size: 80, source: {
                   uri: "https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/10391811_455385081337078_892413498725531531_n.jpg?oh=bfbfda6b61cfd334ff68c03e81d0c6fb&oe=5AD33F08"
-                }, __source: {
+                }, style: { borderRadius: 10 }, __source: {
                   fileName: _jsxFileName,
                   lineNumber: 27
                 }

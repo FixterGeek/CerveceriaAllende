@@ -23,41 +23,29 @@ var Encabezado = function Encabezado(props) {
         lineNumber: 8
       }
     },
+    _react2.default.createElement(_reactNative.Image, { style: styles.img, source: {
+        uri: 'https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/10391811_455385081337078_892413498725531531_n.jpg?oh=bfbfda6b61cfd334ff68c03e81d0c6fb&oe=5AD33F08'
+      }, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      }
+    }),
     _react2.default.createElement(
-      _nativeBase.Left,
+      _reactNative.Text,
       {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 15
         }
       },
-      _react2.default.createElement(_reactNative.Image, { style: styles.img, source: {
-          uri: 'https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/10391811_455385081337078_892413498725531531_n.jpg?oh=bfbfda6b61cfd334ff68c03e81d0c6fb&oe=5AD33F08'
-        }, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        }
-      })
+      'CERVECERIA ALLENDE'
     ),
-    _react2.default.createElement(
-      _nativeBase.Body,
-      {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      },
-      _react2.default.createElement(
-        _reactNative.Text,
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 15
-          }
-        },
-        'CERVECERIA ALLENDE'
-      )
-    )
+    _react2.default.createElement(_reactNative.View, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      }
+    })
   );
 };
 
@@ -66,10 +54,14 @@ exports.default = Encabezado;
 
 var styles = _reactNative.StyleSheet.create({
   header: {
-    backgroundColor: "white"
+    backgroundColor: "white",
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   img: {
     width: 50,
-    height: 50
+    height: 50,
+    borderRadius: 10,
+    margin: 5
   }
 });

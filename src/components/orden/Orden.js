@@ -26,7 +26,7 @@ class Orden extends Component {
                 <ListItem key={index} onPress={()=> Actions.Detalle({lista:lista})}>
                   <Thumbnail square size={80} source={{
                       uri: "https://scontent.fmex5-1.fna.fbcdn.net/v/t1.0-9/10391811_455385081337078_892413498725531531_n.jpg?oh=bfbfda6b61cfd334ff68c03e81d0c6fb&oe=5AD33F08"
-                    }}/>
+                    }} style={{borderRadius:10}}/>
                   <Body style={{paddingLeft:10}}>
                     <Text>Cliente: {lista.cliente}</Text>
                     <Text note="note">Total: {lista.total}</Text>

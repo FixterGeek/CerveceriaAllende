@@ -5,6 +5,9 @@ import {Container, Card} from 'native-base';
 import ProductosList from './ProductosList';
 import Encabezado from './Encabezado';
 import {Actions} from 'react-native-router-flux';
+import img1 from '../../assets/imgs/img1.jpg';
+import img2 from '../../assets/imgs/img2.jpg';
+import img3 from '../../assets/imgs/img3.jpg';
 
 class Principal extends Component {
   render() {
@@ -14,7 +17,7 @@ class Principal extends Component {
         <StatusBar backgroundColor="orange" barStyle="light-content"/>
         <Card style={styles.card}>
           <TouchableOpacity onPress={() => Actions.ProductosList()}>
-          <ImageBackground source={{uri: "http://cerveceriaallende.mx/wp-content/uploads/2016/04/4-copia.jpg"}} style={styles.img}>
+          <ImageBackground source={img1} style={styles.img}>
             <View style={styles.view4}>
               <Text style={styles.text}>ORDENAR</Text>
             </View>
@@ -24,7 +27,7 @@ class Principal extends Component {
 
         <Card style={styles.card}>
           <TouchableOpacity onPress={() => Actions.Orden()}>
-          <ImageBackground source={{uri: "http://cerveceriaallende.mx/wp-content/uploads/2016/04/5-copia.jpg"}} style={styles.img}>
+          <ImageBackground source={img2} style={styles.img}>
             <View style={styles.view4}>
               <Text style={styles.text}>VER ORDENES</Text>
             </View>
@@ -34,7 +37,7 @@ class Principal extends Component {
 
         <Card style={styles.card}>
           <TouchableOpacity onPress={() => Actions.Qrcode()}>
-            <ImageBackground source={{uri: "http://conceptodefinicion.de/wp-content/uploads/2017/03/Inventario.jpg"}} style={styles.img}>
+            <ImageBackground source={img3} style={styles.img}>
               <View style={styles.view4}>
                 <Text style={styles.text}>AÑADIR A INVENTARIO</Text>
               </View>
